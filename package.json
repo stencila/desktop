@@ -24,7 +24,7 @@
   "scripts": {
     "lint": "eslint *.js",
     "start": "electron .",
-    "build": "electron-packager . --out=build --asar --overwrite --all"
+    "build": "electron-packager . --out=build --asar --overwrite"
   },
   "files": [
     "index.js"
