@@ -16,7 +16,7 @@ addons:
       - gcc-5
       - g++-5
 
-before_script:
+before_install:
   ## Ensure using g++-5
   - sudo rm /bin/usr/g++
   - sudo ln -s /usr/bin/g++-5 /usr/bin/g++
