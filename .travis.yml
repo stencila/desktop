@@ -13,13 +13,11 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - gcc-5
       - g++-5
+env:
+  - CXX=g++-5
 
 before_install:
-  ## Ensure using g++-5
-  - sudo rm /bin/usr/g++
-  - sudo ln -s /usr/bin/g++-5 /usr/bin/g++
   # Using xvfb for headless browser based tests
   # Based on https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-a-GUI
   # and https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
