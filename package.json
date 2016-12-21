@@ -22,6 +22,7 @@
     "url": "https://github.com/stencila/electron/issues"
   },
   "scripts": {
+    "rebuild": "electron-rebuild",
     "lint": "eslint *.js",
     "test": "mocha tests",
     "start": "electron .",
@@ -39,6 +40,7 @@
     "devtron": "^1.1.0",
     "electron": "^1.4.4",
     "electron-packager": "^8.0.0",
+    "electron-rebuild": "^1.4.0",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
