@@ -5,6 +5,9 @@ all: setup build
 setup:
 	npm install
 
+rebuild:
+	npm run rebuild
+
 run:
 	npm start
 
