@@ -1,5 +1,10 @@
 ## `stencila/electron` : Stencila on the desktop
 
+[![Build status](https://travis-ci.org/stencila/electron.svg?branch=master)](https://travis-ci.org/stencila/electron)
+[![Code coverage](https://codecov.io/gh/stencila/electron/branch/master/graph/badge.svg)](https://codecov.io/gh/stencila/electron)
+[![Dependency status](https://david-dm.org/stencila/electron.svg)](https://david-dm.org/stencila/electron)
+[![Chat](https://badges.gitter.im/stencila/stencila.svg)](https://gitter.im/stencila/stencila)
+
 ### Status
 
 ![](http://blog.stenci.la/wip.png)
@@ -14,26 +19,14 @@ We love feedback. Create a [new issue](https://github.com/stencila/electron/issu
 
 ### Develop
 
-Install dependencies,
+Most development tasks can be run directly using Node.js tooling (`npm` etc) or via `make` wrapper recipes.
 
-```
-$ make setup
-# or
-$ npm install
-```
+Task                                                    |`npm` et al            | `make`          |
+------------------------------------------------------- |-----------------------|-----------------|    
+Install and setup dependencies                          | `npm install`         | `make setup`
+Check code for lint                                     | `npm run lint`        | `make lint`
+Run tests                                               | `npm test`            | `make test`
+Run tests with coverage                                 | `npm run cover`       | `make cover`
+Build the app                                           | `npm run build`       | `make build`
+Clean                                                   |                       | `make clean`
 
-Run the app,
-
-```
-$ make run
-# or
-$ npm start
-```
-
-Then build the app for MacOS, Linux, and Windows, using [electron-packager](https://github.com/electron-userland/electron-packager).
-
-```
-$ make build
-# or
-$ npm run build
-```
