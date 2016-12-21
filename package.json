@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "electron-debug": "^1.0.0",
-    "stencila": "github:stencila/node"
+    "stencila": "^0.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
