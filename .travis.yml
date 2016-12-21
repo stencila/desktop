@@ -17,6 +17,7 @@ before_script:
 
 script:
   - make lint
+  - make test
   - make build
 
 after_success:
