@@ -4,6 +4,8 @@
 [![Dependency status](https://david-dm.org/stencila/electron.svg)](https://david-dm.org/stencila/electron)
 [![Chat](https://badges.gitter.im/stencila/stencila.svg)](https://gitter.im/stencila/stencila)
 
+![Screenshot](images/screenshot.png)
+
 ### Status
 
 ![](http://blog.stenci.la/wip.png)
