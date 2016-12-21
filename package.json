@@ -1,7 +1,7 @@
 {
   "name": "stencila-electron",
   "productName": "Stencila",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Stencila on the desktop",
   "keywords": [
     "data",
