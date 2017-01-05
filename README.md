@@ -20,6 +20,8 @@ We love feedback. Create a [new issue](https://github.com/stencila/electron/issu
 
 ### Develop
 
+Want to help out with development? To get started, read our contributor [code of conduct](CONDUCT.md), then [get in touch](https://gitter.im/stencila/stencila) or checkout the [platform-wide, cross-repository kanban board](https://github.com/orgs/stencila/projects/1).
+
 Most development tasks can be run directly using Node.js tooling (`npm` etc) or via `make` wrapper recipes.
 
 Task                                                    |`npm` et al            | `make`          |
