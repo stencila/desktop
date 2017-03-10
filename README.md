@@ -1,10 +1,8 @@
-## `stencila/electron` : Stencila on the desktop
+## `stencila/desktop` : Stencila on the desktop
 
-[![Build status](https://travis-ci.org/stencila/electron.svg?branch=master)](https://travis-ci.org/stencila/electron)
-[![Dependency status](https://david-dm.org/stencila/electron.svg)](https://david-dm.org/stencila/electron)
+[![Build status](https://travis-ci.org/stencila/desktop.svg?branch=master)](https://travis-ci.org/stencila/desktop)
+[![Dependency status](https://david-dm.org/stencila/desktop.svg)](https://david-dm.org/stencila/desktop)
 [![Chat](https://badges.gitter.im/stencila/stencila.svg)](https://gitter.im/stencila/stencila)
-
-![Screenshot](images/screenshot.png)
 
 ### Status
 
@@ -15,7 +13,7 @@ This is very much a work in progress. See our [main repo](https://github.com/ste
 
 ### Discuss
 
-We love feedback. Create a [new issue](https://github.com/stencila/electron/issues/new), add to [existing issues](https://github.com/stencila/electron/issues) or [chat](https://gitter.im/stencila/stencila) with members of the community.
+We love feedback. Create a [new issue](https://github.com/stencila/desktop/issues/new), add to [existing issues](https://github.com/stencila/desktop/issues) or [chat](https://gitter.im/stencila/stencila) with members of the community.
 
 
 ### Develop
