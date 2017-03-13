@@ -1,35 +1,11 @@
-## `stencila/desktop` : Stencila on the desktop
+# Stencila Desktop
 
-[![Build status](https://travis-ci.org/stencila/desktop.svg?branch=master)](https://travis-ci.org/stencila/desktop)
-[![Dependency status](https://david-dm.org/stencila/desktop.svg)](https://david-dm.org/stencila/desktop)
-[![Chat](https://badges.gitter.im/stencila/stencila.svg)](https://gitter.im/stencila/stencila)
+Install
 
-### Status
-
-![](http://blog.stenci.la/wip.png)
-
-This is very much a work in progress. See our [main repo](https://github.com/stencila/stencila) for more details.
-
-
-### Discuss
-
-We love feedback. Create a [new issue](https://github.com/stencila/desktop/issues/new), add to [existing issues](https://github.com/stencila/desktop/issues) or [chat](https://gitter.im/stencila/stencila) with members of the community.
-
-
-### Develop
-
-Want to help out with development? To get started, read our contributor [code of conduct](CONDUCT.md), then [get in touch](https://gitter.im/stencila/stencila) or checkout the [platform-wide, cross-repository kanban board](https://github.com/orgs/stencila/projects/1).
-
-Most development tasks can be run directly using Node.js tooling (`npm` etc) or via `make` wrapper recipes.
-
-Task                                                    |`npm` et al            | `make`          |
-------------------------------------------------------- |-----------------------|-----------------|    
-Install and setup dependencies                          | `npm install`         | `make setup`
-Rebuild dependencies for Electron (electron-rebuild)    | `npm run rebuild`     | `make rebuild`
-Check code for lint                                     | `npm run lint`        | `make lint`
-Run tests                                               | `npm test`            | `make test`
-Run tests with coverage                                 | `npm run cover`       | `make cover`
-Build the app                                           | `npm run build`       | `make build`
-Clean                                                   |                       | `make clean`
-
-After you install a new npm package, rerun [electron-rebuild](https://github.com/electron/electron-rebuild) using `make rebuild`.
+```bash
+$ git clone https://github.com/stencila/stencila.git
+$ cd stencila
+$ npm install
+$ npm build
+$ npm start
+```

@@ -1,51 +1,35 @@
 {
-  "name": "stencila-electron",
-  "productName": "Stencila",
-  "version": "0.1.1",
-  "description": "Stencila on the desktop",
-  "keywords": [
-    "data",
-    "documents",
-    "sheets",
-    "sessions",
-    "reproducibility",
-    "science"
-  ],
-  "author": "",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/stencila/electron#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stencila/electron.git"
-  },
-  "bugs": {
-    "url": "https://github.com/stencila/electron/issues"
+  "name": "stencila-desktop",
+  "productName": "Stencila Desktop",
+  "description": "Stencila for the desktop",
+  "version": "0.25.0",
+  "author": "Nokome Bentley",
+  "homepage": "http://stenci.la",
+  "license": "MIT",
+  "main": "app/main.js",
+  "build": {
+    "appId": "com.stencila.stencila-desktop",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "publish": null
   },
   "scripts": {
-    "rebuild": "electron-rebuild",
-    "lint": "eslint *.js",
-    "test": "mocha tests",
-    "start": "electron .",
-    "build": "electron-packager . --out=build --asar --overwrite"
+    "postinstall": "install-app-deps",
+    "build": "node make",
+    "prerelease": "node make",
+    "release": "build",
+    "start": "electron ."
   },
-  "files": [
-    "index.js"
-  ],
   "dependencies": {
-    "electron-debug": "^1.0.0",
-    "stencila": "^0.1.0"
+    "stencila-ui": "stencila/stencila#master"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "devtron": "^1.1.0",
-    "electron": "^1.4.4",
-    "electron-packager": "^8.0.0",
-    "electron-rebuild": "^1.4.0",
-    "eslint": "^3.5.0",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "mocha": "^3.2.0",
-    "spectron": "^3.4.1"
+    "electron": "1.6.2",
+    "electron-builder": "^14.5.2",
+    "substance-bundler": "0.12.0",
+    "source-map-support": "^0.4.11"
   }
 }
