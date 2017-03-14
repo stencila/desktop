@@ -10,15 +10,7 @@
   <script type="text/javascript" src="../node_modules/stencila/build/katex/katex.min.js"></script>
   <script type="text/javascript" src="../node_modules/stencila/build/stencila.js"></script>
   <script>
-    const { DocumentPage, MemoryBackend, getQueryStringParam } = window.stencila
-    let stubBackend = new MemoryBackend()
-    window.addEventListener('load', () => {
-      console.info('Loading...', getQueryStringParam('archiveURL'))
-      DocumentPage.mount({
-        backend: new MemoryBackend(),
-        archiveURL: getQueryStringParam('archiveURL') || '/examples/kitchen-sink'
-      }, window.document.body)
-    })
+    require('./document/documentWindow')
   </script>
 </head>
 <body>
