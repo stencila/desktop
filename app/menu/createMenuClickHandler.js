@@ -1,11 +1,9 @@
-const { BrowserWindow } = require('electron')
-
+const currentWindow = require('electron').remote.getCurrentWindow()
 /*
   Sends an event of the given event name to the focused window
 */
-module.exports = function createMenuHandler(eventName) {
+module.exports = function createMenuHandler(eventName, data) {
   return function() {
-    let focusedWindow = BrowserWindow.getFocusedWindow()
-    focusedWindow.send(eventName)
+    currentWindow.send(eventName, data)
   }
 }

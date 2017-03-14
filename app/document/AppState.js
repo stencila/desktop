@@ -3,15 +3,16 @@ const { EventEmitter } = window.substance
 class AppState extends EventEmitter {
   constructor(...args) {
     super(...args)
+    this._appState = {}
   }
 
-  set(key, value) {
-    this._state[key] = value
-    this.emit(key, value)
+  extend(newState) {
+    Object.assign(this._appState, newState)
+    this.emit('change', this._appState)
   }
 
   get(key) {
-    return this._state[key]
+    return this._appState[key]
   }
 }
 

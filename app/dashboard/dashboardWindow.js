@@ -5,7 +5,6 @@ const ipc = require('electron').ipcRenderer
 const currentWindow = remote.getCurrentWindow()
 const { Menu } = remote
 const windowId = currentWindow.id
-
 const DashboardMenuBuilder = require('./DashboardMenuBuilder')
 const dashboardMenuBuilder = new DashboardMenuBuilder()
 
@@ -13,13 +12,10 @@ let appState = {}
 
 function _updateMenu() {
   let menu = dashboardMenuBuilder.build(appState)
-  console.log('setting dashboard menu', menu)
   Menu.setApplicationMenu(menu)
 }
 
 currentWindow.on('focus', () => {
-  console.log('dashboard focused')
-
   // Set up the menu for the dashboard
   _updateMenu(appState)
 
