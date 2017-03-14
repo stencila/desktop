@@ -18,8 +18,6 @@
   },
   "scripts": {
     "postinstall": "install-app-deps",
-    "build": "node make",
-    "prerelease": "node make",
     "release": "build",
     "start": "electron ."
   },

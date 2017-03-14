@@ -1,0 +1,1703 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"S",
+				"Sys"
+			],
+			[
+				"wri",
+				"written"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"r",
+				"resource"
+			],
+			[
+				"Dat",
+				"DataFrame"
+			],
+			[
+				"Test",
+				"TestClass"
+			],
+			[
+				"__get",
+				"__getitem__"
+			],
+			[
+				"refresh",
+				"refreshContainer"
+			],
+			[
+				"comment",
+				"comment-1"
+			],
+			[
+				"para",
+				"paragraph-1"
+			],
+			[
+				"prop",
+				"property-sort-order"
+			],
+			[
+				"create",
+				"createDocument"
+			],
+			[
+				"model",
+				"modelFactory"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fle",
+				"flex-direction"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"document",
+				"documentId"
+			],
+			[
+				"docum",
+				"documentIds"
+			],
+			[
+				"docume",
+				"documentSession"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"snap",
+				"snapshot"
+			],
+			[
+				"mathc",
+				"matches"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"schema",
+				"schemaName"
+			],
+			[
+				"import",
+				"importDocument"
+			],
+			[
+				"cra",
+				"createDocument"
+			],
+			[
+				"co",
+				"collab"
+			],
+			[
+				"ser",
+				"server"
+			],
+			[
+				"doc",
+				"documentId"
+			],
+			[
+				"Sho",
+				"snapshotStore"
+			],
+			[
+				"ne",
+				"newVersion"
+			],
+			[
+				"tap",
+				"tap-spec"
+			],
+			[
+				"Coo",
+				"CollabSession"
+			],
+			[
+				"Prop",
+				"Prototype"
+			],
+			[
+				"Coll",
+				"CollabSession"
+			],
+			[
+				"do",
+				"documentSession"
+			],
+			[
+				"Document",
+				"DocumentModel"
+			],
+			[
+				"Docume",
+				"DocumentModel"
+			],
+			[
+				"sc",
+				"schemaName"
+			],
+			[
+				"Do",
+				"DocumentModel"
+			],
+			[
+				"Docu",
+				"documentFactory"
+			],
+			[
+				"doucmen",
+				"documentFactory"
+			],
+			[
+				"loc",
+				"localhost"
+			],
+			[
+				"docu",
+				"documentId"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"la",
+				"languageProperty"
+			],
+			[
+				"code",
+				"codeProperty"
+			],
+			[
+				"getL",
+				"getLanguagePropertyName"
+			],
+			[
+				"getCode",
+				"getCodePropertyName"
+			],
+			[
+				"tool",
+				"toolsInlineNode"
+			],
+			[
+				"e",
+				"emojione"
+			],
+			[
+				"Blo",
+				"BlockTool"
+			],
+			[
+				"read",
+				"readOnly"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"content",
+				"contenteditable"
+			],
+			[
+				"extend",
+				"extendState"
+			],
+			[
+				"se",
+				"se-tool"
+			],
+			[
+				"sm-",
+				"sm-expanded"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"dis",
+				"discussion"
+			],
+			[
+				"pa",
+				"parent"
+			],
+			[
+				"_",
+				"_onHideClicked"
+			],
+			[
+				"pr",
+				"Prototype"
+			],
+			[
+				"bro",
+				"border-radius"
+			],
+			[
+				"can",
+				"canChangeType"
+			],
+			[
+				"nod",
+				"nodeId"
+			],
+			[
+				"selection",
+				"selectionType"
+			],
+			[
+				"Co",
+				"CodeblockComponent"
+			],
+			[
+				"O",
+				"Overlay"
+			],
+			[
+				"get",
+				"getDocument"
+			],
+			[
+				"a",
+				"asciimath"
+			],
+			[
+				"selectio",
+				"selectionState"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"node",
+				"node_modules"
+			],
+			[
+				"red",
+				"render"
+			],
+			[
+				"edit",
+				"editGroup"
+			],
+			[
+				"command",
+				"commandStates"
+			],
+			[
+				"comman",
+				"commandStates"
+			],
+			[
+				"blo",
+				"blockquote"
+			],
+			[
+				"tes",
+				"test_sources"
+			],
+			[
+				"stencila",
+				"stencila-linux"
+			],
+			[
+				"P",
+				"PHONY"
+			],
+			[
+				"PN",
+				"PHONY"
+			],
+			[
+				"subscribe",
+				"subscriber"
+			],
+			[
+				"write",
+				"write_time"
+			],
+			[
+				"Wat",
+				"Watcher"
+			],
+			[
+				"tit",
+				"title_node"
+			],
+			[
+				"figure",
+				"figure_caption"
+			],
+			[
+				"set",
+				"set_name"
+			],
+			[
+				"insert",
+				"insert_child_before"
+			],
+			[
+				"fig",
+				"figcaption"
+			],
+			[
+				"tests",
+				"tests-quick"
+			],
+			[
+				"name",
+				"name_dll"
+			],
+			[
+				"COMM",
+				"COMMIT"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"St",
+				"Stencila"
+			],
+			[
+				"cont",
+				"contenteditable"
+			],
+			[
+				"CMARK_N",
+				"CMARK_NODE_LINK"
+			],
+			[
+				"cmark",
+				"cmark_node"
+			],
+			[
+				"par",
+				"pair"
+			],
+			[
+				"inlin",
+				"node_inline"
+			],
+			[
+				"TH",
+				"STENCILA_THROW"
+			],
+			[
+				"cmar",
+				"cmark_node_free"
+			],
+			[
+				"DOCKER",
+				"DOCKER_BUILD"
+			],
+			[
+				"em",
+				"embedded"
+			],
+			[
+				"temp",
+				"temp_directory_path"
+			],
+			[
+				"to",
+				"too"
+			],
+			[
+				"includ",
+				"includee"
+			],
+			[
+				"com",
+				"component"
+			],
+			[
+				"find",
+				"findstring"
+			],
+			[
+				"CPP",
+				"CPP_FLAGS"
+			],
+			[
+				"cell",
+				"cell_pointer"
+			],
+			[
+				"string",
+				"stringstream_"
+			],
+			[
+				"ostr",
+				"ostringstream"
+			],
+			[
+				"arg",
+				"arguments"
+			],
+			[
+				"kind",
+				"kind_string"
+			],
+			[
+				"local",
+				"local_address"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"STENCIL",
+				"STENCILA_THROW"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"erro",
+				"error_code"
+			],
+			[
+				"ex",
+				"except〔keyword〕"
+			],
+			[
+				"visit",
+				"visit_number"
+			],
+			[
+				"STING",
+				"string"
+			],
+			[
+				"str",
+				"strings"
+			],
+			[
+				"at",
+				"attr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Remote:   origin @ git@github.com:stencila/electron\nLocal:    master ~/stencila/source/electron\nHead:     a33bb5a Add code of conduct\n\n\nNothing to commit (working directory clean)\n\n# Movement:\n#    r = refresh status\n#    1-5 = jump to section\n#    n = next item, N = next section\n#    p = previous item, P = previous section\n#\n# Staging:\n#    s = stage file/section, S = stage all unstaged files\n#    ctrl+shift+s = stage all unstaged and untracked files\n#    u = unstage file/section, U = unstage all files\n#    backspace = discard file/section, shift+backspace = discard everything\n#\n# Commit:\n#    c = commit, C = commit -a (add unstaged)\n#    ctrl+shift+c = commit --amend (amend previous commit)\n#\n# Other:\n#    i = ignore file, I = ignore pattern\n#    enter = open file\n#    d = view diff\n#\n# Stashes:\n#    a = apply stash, A = pop stash\n#    z = create stash, Z = create stash including untracked files\n#    backspace = discard stash",
+			"settings":
+			{
+				"buffer_size": 941,
+				"line_ending": "Unix",
+				"name": "*git-status*: electron",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 132.0,
+		"last_filter": "push",
+		"selected_items":
+		[
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"sync",
+				"Legit: Sync"
+			],
+			[
+				"log",
+				"Git: Log"
+			],
+			[
+				"lo",
+				"Git: Log"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"sheba",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"commen",
+				"Toggle Block Comment"
+			],
+			[
+				"syn",
+				"Legit: Sync"
+			],
+			[
+				"diff",
+				"Git: Diff"
+			],
+			[
+				"git",
+				"Git: Checkout"
+			],
+			[
+				"git ch",
+				"Git: Checkout Commit"
+			],
+			[
+				"ch",
+				"Git: Checkout"
+			],
+			[
+				"che",
+				"Git: Checkout"
+			],
+			[
+				"st",
+				"Git: Status"
+			],
+			[
+				"build with",
+				"Build With: Test one: run one test file"
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"doxy",
+				"DoxyDoxygen: Build Documentation"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"blam",
+				"Git: Blame"
+			],
+			[
+				"lint t",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lint thi",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"sublineline",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"indent",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"hint",
+				"JSHint"
+			],
+			[
+				"hinr",
+				"JSHint: Clear Annotations"
+			],
+			[
+				"hin",
+				"JSHint"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"reve",
+				"File: Revert"
+			],
+			[
+				"jshin",
+				"JSHint"
+			],
+			[
+				"bl",
+				"Git: Blame"
+			],
+			[
+				"blame",
+				"Git: Blame"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"lore",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"jshi",
+				"JSHint"
+			],
+			[
+				"prefer",
+				"Preferences: Settings - Default"
+			],
+			[
+				"br",
+				"Legit: Branches"
+			],
+			[
+				"mer",
+				"Git: Merge"
+			],
+			[
+				"switch",
+				"Legit: Switch"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"swit",
+				"Legit: Switch"
+			],
+			[
+				"sw",
+				"Legit: Switch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"swi",
+				"Legit: Switch"
+			],
+			[
+				"git chec",
+				"Git: Checkout Commit"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"syntax",
+				"Set Syntax: Markdown"
+			],
+			[
+				"search",
+				"File: Search Files"
+			],
+			[
+				"bran",
+				"Legit: Branches"
+			],
+			[
+				"jso",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"git sync",
+				"Legit: Sync"
+			],
+			[
+				"merge",
+				"Git: Merge"
+			],
+			[
+				"check",
+				"Git: Checkout Commit"
+			],
+			[
+				"branch",
+				"Git: Checkout New Branch"
+			],
+			[
+				"linting",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"master",
+				"Bookmarks: Select Previous"
+			],
+			[
+				"lintin",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"switc",
+				"Legit: Switch"
+			],
+			[
+				"branches",
+				"Legit: Branches"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"chec",
+				"Git: Checkout Commit"
+			],
+			[
+				"psu",
+				"Git: Push"
+			],
+			[
+				"ps",
+				"Git: Push"
+			],
+			[
+				"psuh",
+				"Git: Push"
+			],
+			[
+				"b",
+				"Legit: Branches"
+			],
+			[
+				"git che",
+				"Git: Checkout New Branch"
+			],
+			[
+				"spro",
+				"Legit: Sprout"
+			],
+			[
+				"stau",
+				"Git: Status"
+			],
+			[
+				"stash",
+				"Git: Stash"
+			],
+			[
+				"merg",
+				"Git: Merge"
+			],
+			[
+				"me",
+				"Git: Merge"
+			],
+			[
+				"pop",
+				"Git: Pop Stash"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"sy",
+				"Legit: Sync"
+			],
+			[
+				"l",
+				"Git: Log"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"doc",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"stas",
+				"Git: Pop Stash"
+			],
+			[
+				"sublime",
+				"SublimeGit: Add License"
+			],
+			[
+				"gdb",
+				"SublimeGDB: Continue"
+			],
+			[
+				"stop",
+				"SublimeGDB: Stop Debugging"
+			],
+			[
+				"de",
+				"SublimeGDB: Start Debugging"
+			],
+			[
+				"deb",
+				"SublimeGDB: Start Debugging"
+			],
+			[
+				"sybc",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"in",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"ind",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"powersh",
+				"SublimeREPL: PowerShell"
+			],
+			[
+				"",
+				"Build: Build"
+			],
+			[
+				"convert",
+				"z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
+			],
+			[
+				"aaa",
+				"z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
+			],
+			[
+				"aa",
+				"z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
+			],
+			[
+				"new sy",
+				"z:AAAPackageDev: New JSON Syntax Definition"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"repos",
+				"Package Control: Add Repository"
+			],
+			[
+				"debu",
+				"SublimeGDB: Start Debugging"
+			],
+			[
+				"sa",
+				"Project: Save As"
+			],
+			[
+				"ad",
+				"Project: Add Folder"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 307.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/nokome/stencila/source/electron"
+	],
+	"file_history":
+	[
+		"/home/nokome/stencila/source/electron/.travis.yml",
+		"/home/nokome/stencila/source/electron/README.md",
+		"/home/nokome/stencila/source/electron/Makefile",
+		"/home/nokome/stencila/source/electron/package.json",
+		"/home/nokome/stencila/source/cpp/LICENSE",
+		"/home/nokome/stencila/source/node/LICENSE",
+		"/home/nokome/stencila/source/electron/tests/index.js",
+		"/home/nokome/stencila/source/electron/.git/config",
+		"/home/nokome/stencila/source/node/.git/config",
+		"/home/nokome/stencila/source/electron/stencila.sublime-project",
+		"/home/nokome/stencila/source/electron/.eslintrc.js",
+		"/home/nokome/stencila/source/electron/.gitignore",
+		"/home/nokome/stencila/source/electron/index.html",
+		"/home/nokome/stencila/source/electron/index.js",
+		"/home/nokome/stencila/source/electron/document.js",
+		"/home/nokome/trophia/code/tagtracker/dump.sh",
+		"/home/nokome/trophia/code/tagtracker/tagtracker_schema.sql",
+		"/home/nokome/trophia/code/tagtracker/tagtracker.sql",
+		"/home/nokome/trophia/code/tagtracker/dump.sql",
+		"/home/nokome/stencila/source/electron/readme.md",
+		"/home/nokome/stencila/source/r/DESCRIPTION",
+		"/home/nokome/stencila/source/r/NAMESPACE",
+		"/home/nokome/stencila/source/r/R/instance.R",
+		"/home/nokome/stencila/source/r/R/component.R",
+		"/home/nokome/stencila/source/r/R/session.R",
+		"/home/nokome/stencila/source/r/R/servers-http.R",
+		"/home/nokome/stencila/source/r/tests/testthat/test.servers.http.R",
+		"/home/nokome/stencila/source/r/R/servers/http.R",
+		"/home/nokome/stencila/source/r/R/servers",
+		"/home/nokome/stencila/source/r/.travis.yml",
+		"/home/nokome/stencila/source/r/tests/testthat/test.component.R",
+		"/home/nokome/stencila/source/r/R/context.R",
+		"/home/nokome/stencila/source/r/R/document.R",
+		"/home/nokome/stencila/source/r/R/sheet.R",
+		"/home/nokome/stencila/source/r/tests/testthat.R",
+		"/home/nokome/stencila/source/r/tests/testthat/test.tests.R",
+		"/home/nokome/stencila/source/r/tests/testthat/test.sheet.R",
+		"/home/nokome/stencila/source/r/tests/testthat/test.session.R",
+		"/home/nokome/stencila/source/r/tests/testthat/test.document.R",
+		"/home/nokome/stencila/source/r/Makefile",
+		"/home/nokome/stencila/source/r/.gitignore",
+		"/home/nokome/stencila/source/r/.Rbuildignore",
+		"/home/nokome/stencila/source/r/stencila.sublime-project",
+		"/home/nokome/stencila/source/r/stencila.Rcheck/00check.log",
+		"/home/nokome/stencila/source/js/src/Component.js",
+		"/home/nokome/stencila/source/js/tests/Component.test.js",
+		"/home/nokome/stencila/source/js/package.json",
+		"/home/nokome/stencila/source/js/.travis.yml",
+		"/home/nokome/stencila/source/js/.eslintrc.js",
+		"/home/nokome/stencila/source/js/src/components.js",
+		"/home/nokome/stencila/source/js/tests/Session.test.js",
+		"/home/nokome/stencila/source/js/src/Session.js",
+		"/home/nokome/stencila/source/js/index.js",
+		"/home/nokome/stencila/source/js/tests/index.js",
+		"/home/nokome/stencila/source/js/src/component.js",
+		"/home/nokome/stencila/source/js/tests/phony.test.js",
+		"/home/nokome/stencila/source/js/stencila.sublime-project",
+		"/home/nokome/stencila/source/js/.gitignore",
+		"/home/nokome/stencila/source/py/.sublime-project",
+		"/home/nokome/stencila/source/stencila.sublime-project",
+		"/home/nokome/stencila/source/js/README.md",
+		"/home/nokome/stencila/source/web/README.md",
+		"/home/nokome/stencila/source/r/.git/config",
+		"/home/nokome/stencila/source/js/.git/config",
+		"/home/nokome/stencila/source/js/Makefile",
+		"/home/nokome/stencila/source/web/package.json",
+		"/home/nokome/stencila/source/web/.travis.yml",
+		"/home/nokome/stencila/source/py/README.md",
+		"/home/nokome/stencila/source/py/.travis.yml",
+		"/home/nokome/stencila/source/stencila/.travis.yml",
+		"/home/nokome/stencila/source/py/.git/config",
+		"/home/nokome/stencila/source/py/Makefile",
+		"/home/nokome/stencila/source/py/tox.ini",
+		"/home/nokome/stencila/source/py/.gitignore",
+		"/home/nokome/stencila/source/py/tests/test_stencila.py",
+		"/home/nokome/stencila/source/py/coverage.xml",
+		"/home/nokome/stencila/source/py/stencila/__init__.py",
+		"/home/nokome/stencila/source/py/setup.py",
+		"/home/nokome/stencila/source/web/.git/config",
+		"/home/nokome/stencila/source/r/LICENSE",
+		"/home/nokome/stencila/source/r/README.md",
+		"/home/nokome/stencila/source/stencila/r/Makefile",
+		"/home/nokome/stencila/source/r/R/hello.R",
+		"/home/nokome/stencila/source/r/r.Rproj",
+		"/home/nokome/stencila/source/web/utilities/math/asciimath.js",
+		"/home/nokome/stencila/source/web/utilities/math/index.js",
+		"/home/nokome/stencila/source/web/document/_content.scss",
+		"/home/nokome/stencila/source/web/tests/utilities/math/math.test.js",
+		"/home/nokome/stencila/source/web/utilities/code/index.js",
+		"/home/nokome/stencila/source/web/document/nodes/math/MathComponent.js",
+		"/home/nokome/stencila/source/web/document/document.js",
+		"/home/nokome/stencila/source/web/document/ui/CodeEditorComponent.js",
+		"/home/nokome/stencila/source/web/utilities/load.js",
+		"/home/nokome/stencila/source/web/Makefile",
+		"/home/nokome/stencila/source/web/tests/index.js",
+		"/home/nokome/stencila/source/substance/.travis.yml",
+		"/home/nokome/stencila/source/web/index.html",
+		"/home/nokome/stencila/source/substance/README.md",
+		"/home/nokome/stencila/source/stencila/README.md",
+		"/home/nokome/stencila/source/web/gulpfile.js",
+		"/home/nokome/stencila/source/web/coverage/lcov-report/index.html",
+		"/home/nokome/stencila/source/web/collab/ChangeStore.js",
+		"/home/nokome/stencila/source/web/collab/DocumentStore.js",
+		"/home/nokome/stencila/source/stencila/web/package.json",
+		"/home/nokome/stencila/source/web/postinstall.sh",
+		"/home/nokome/stencila/source/web/node_modules/substance/packages/heading/Heading.js",
+		"/home/nokome/stencila/source/web/document/DocumentApp.js",
+		"/home/nokome/stencila/source/web/document/editors/code/CodeEditor.js",
+		"/home/nokome/stencila/source/stencila-future/soxygen.js",
+		"/home/nokome/stencila/source/stencila-future/README-template.md",
+		"/home/nokome/stencila/source/stencila-future/entity/entity.yaml",
+		"/home/nokome/stencila/source/stencila-future/entity/README.md",
+		"/home/nokome/stencila/source/web/LICENSE",
+		"/home/nokome/stencila/source/defunct/README.md",
+		"/home/nokome/stencila/source/stencila-future/Makefile",
+		"/home/nokome/stencila/source/stencila-py/tests/variable.py",
+		"/home/nokome/stencila/source/stencila-py/context.py",
+		"/home/nokome/stencila/source/stencila-py/tests/context-tests.py",
+		"/home/nokome/stencila/source/stencila-py/tests/__init__.py",
+		"/home/nokome/stencila/source/stencila-context/context.py",
+		"/home/nokome/stencila/source/stencila-context/rest_server.py",
+		"/home/nokome/stencila/source/stencila-session-py/tests/context.py",
+		"/home/nokome/stencila/source/stencila-session-py/http.py",
+		"/home/nokome/stencila/source/stencila-session-py/context.py",
+		"/home/nokome/stencila/source/stencila-context/README.md",
+		"/home/nokome/stencila/source/stencila-session-py/tests/context_proxy.py",
+		"/home/nokome/stencila/source/stencila-session-py/session.py",
+		"/home/nokome/stencila/source/stencila-session-py/rest_server.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"r/**/*.R",
+			"web/**/*.js",
+			"substance/**/*.js",
+			"web/**/*.js",
+			"substance/**/*.js",
+			"web/**/*.js",
+			"substance/**/*.js",
+			"web/document/**/*.js",
+			"cpp/**/*",
+			"web/**/*.js",
+			"web/document/**/*.scss",
+			"substance/**/*.js",
+			"web/**/*.js",
+			"web/document/**/*.js",
+			"web/**/*.js",
+			"web/**/*",
+			"notes/**/*",
+			"notes/**/*.js",
+			"substance/**/*.js",
+			"web/**/*.js",
+			"substance/**/*.js",
+			"web/document/**/*.js",
+			"web/document/*.js",
+			"web/collab/*.js",
+			"web/collab/**/*.js",
+			"web/document/**/*.js",
+			"web/**/*.js",
+			"web/**/*.scss",
+			"web/**/*.js",
+			"substance/**/*.js",
+			"web/**/*.js",
+			"substance/**/*.js",
+			"web/**/*.js",
+			"substance/**/*.js",
+			"substance/collab/*.js",
+			"substance/*.js",
+			"notes/*.js",
+			"notes/**/*",
+			"web/node_modules/substance/**/*",
+			"web/document/**/*",
+			"web/node_modules/substance/**/*",
+			"web/substance/*",
+			"web/**/*",
+			"web/document/*",
+			"web/**/*",
+			"web/document/**/*",
+			"web/**/*",
+			"web/**/*.js",
+			"web/node_modules/substance/**/*.js",
+			"web/document/**/*.js",
+			"web/node_modules/substance/**",
+			"web/document/nodes/execute/*",
+			"web/node_modules/substance/**/*.js",
+			"web/node_modules/substance/util/*.js",
+			"web/node_modules/substance/**/*.js",
+			"web/node_modules/substance/*",
+			"web/stencil/*",
+			"web/stencil/**/*",
+			"substance/**/*",
+			"substance/**/*.js",
+			"substance",
+			"web/**/*",
+			"web/stencil/*.js",
+			"web/**/*.js",
+			"web",
+			"web/sheet/*.js",
+			"web/**/*.js",
+			"sheet/**/*.js",
+			"cpp/**",
+			"cpp/tests/**",
+			"cpp/**",
+			"cpp/**.*",
+			"cpp/**.cpp",
+			"cpp/**",
+			"coo/**.cpp",
+			"cpp/tests/**.cpp",
+			"cpp/tests/**",
+			"cpp/tests",
+			"web/**.js",
+			"cpp/stencila/**",
+			"cpp/stencils/**",
+			"cpp/**",
+			"substance/**/*.js",
+			"web/stencil/*.js",
+			"web/stencils/*.js",
+			"cpp/stencila/*.cpp",
+			"cpp/stencila/*.hpp",
+			"cpp/**",
+			"cpp/tests/**",
+			"cpp/**",
+			"**",
+			"r/**",
+			"cpp/**",
+			"web/stencil/**",
+			"cpp/stencila/**",
+			"cpp/stecila/**",
+			"r/**",
+			"web/**",
+			"stencil/**",
+			"substance/**",
+			"stencil/**",
+			"substance/**",
+			"substance**",
+			"web/stencil/**",
+			"substance/**",
+			"substance",
+			"web/stencil/**",
+			"substance/**",
+			"web/stencil/**",
+			"r/**",
+			"cpp/**",
+			"web/sheet/**/*.js",
+			"js/**/*.js",
+			"js/**",
+			"**",
+			"py/**",
+			"r/**",
+			"cpp/**",
+			"py/**",
+			"py/**.py",
+			"r/**.R",
+			"web/**/*.js",
+			"**",
+			"py/**",
+			"r/**",
+			"cpp/**",
+			"web/stencil/**",
+			"substance/**"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"node",
+			"web",
+			"node",
+			"document",
+			"mainWindow",
+			"onClosed",
+			"createMainWindow",
+			"sample",
+			"lobster_sync",
+			"lobster_observation",
+			";",
+			"\"",
+			"calss",
+			"clazz",
+			"# ",
+			"    #   ",
+			"# ",
+			"provide",
+			"if ",
+			"raise RuntimeError(",
+			"if (",
+			"((",
+			"if ",
+			"elif ",
+			"if ",
+			"self._",
+			"address[",
+			" + ",
+			"}\n      else if",
+			"return ",
+			"if ",
+			"else:",
+			"elif ",
+			"def ",
+			"self$.",
+			"elif type == ",
+			"asJSON",
+			", shell=True",
+			"subprocess.call",
+			" =",
+			"None",
+			": ",
+			"(self, ",
+			"def ",
+			"logs",
+			"os.makedirs",
+			"os.path.exists",
+			"os.path.join",
+			"private$.",
+			"self$.",
+			"self._",
+			"Component",
+			" == ",
+			"assert ",
+			"s.",
+			"HttpServer(",
+			"def ",
+			"def test_web():",
+			", (s$",
+			"(s$",
+			"s.",
+			" == ",
+			"assert",
+			"# ",
+			"import(",
+			"self",
+			"assert",
+			"s.",
+			"def ",
+			"c.",
+			"equal(equal(",
+			"t.",
+			"let ",
+			"test('",
+			"private$path",
+			"_path",
+			"c.",
+			"t.equal",
+			"let ",
+			"Context",
+			"Sheet",
+			"Document",
+			"Context",
+			"Sheet",
+			"Document",
+			"Component",
+			"path",
+			"tmp",
+			"self.assertTrue",
+			"_path",
+			"let",
+			"var",
+			"self.assertEqual",
+			"__path",
+			"self.",
+			"(self)",
+			"self, ",
+			"def ",
+			"Context",
+			"Sheet",
+			"Document",
+			"Component",
+			"Context",
+			"Sheet",
+			"Document",
+			"Component",
+			"Context",
+			"Component",
+			"Context",
+			"Sheet",
+			"Document",
+			"Component",
+			"web",
+			"r",
+			"'",
+			"web",
+			"INARY",
+			"LEFTRIGHT",
+			"TEXT",
+			"DEFINIT",
+			"refreshSymbols",
+			"newsymbol",
+			"newcommand",
+			"AMinitSymbols",
+			"AMnoMathML",
+			"AMbody",
+			"AMtranslated",
+			"AMTparseMath"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"execute",
+			"Execute",
+			"require('substance-fe0ed/",
+			"substance-fe0ed",
+			"substance__",
+			"require('substance_fe0ed'",
+			"\\n",
+			"9",
+			"8",
+			"7",
+			"6",
+			"5",
+			"4",
+			"3",
+			"2",
+			"1",
+			"12",
+			"11",
+			"10",
+			"unsigned int",
+			"",
+			"unsigned int",
+			"Type",
+			"Tableset",
+			"dim",
+			"<<\"\\t\"<<"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								163
+							]
+						],
+						"settings":
+						{
+							"__vi_external_disable": true,
+							"default_dir": "/home/nokome/stencila/source/electron",
+							"draw_white_space": "none",
+							"git_repo": "/home/nokome/stencila/source/electron",
+							"git_status": true,
+							"git_view": "status",
+							"syntax": "Packages/SublimeGit/syntax/SublimeGit Status.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 398.0
+	},
+	"output.find_results":
+	{
+		"height": 112.0
+	},
+	"output.git-checkout":
+	{
+		"height": 100.0
+	},
+	"output.git-commit":
+	{
+		"height": 100.0
+	},
+	"output.git-push":
+	{
+		"height": 100.0
+	},
+	"output.legit-sync":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "Lint: check for lint",
+	"project": "stencila.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"push",
+				"stencila/node/node_modules/aws-sdk/node_modules/xmlbuilder/node_modules/lodash/internal/cachePush.js"
+			],
+			[
+				"stencil.js",
+				"stencila/web/stencil/model/Stencil.js"
+			],
+			[
+				"sten",
+				"stencila/cpp/stencila/stencil.cpp"
+			],
+			[
+				"stencildef",
+				"stencila/web/stencil/packages/default/StencilDefaultNode.js"
+			],
+			[
+				"stendefn",
+				"stencila/web/stencil/packages/default/StencilDefaultNode.js"
+			],
+			[
+				"stencilnod",
+				"stencila/web/stencil/model/StencilNode.js"
+			],
+			[
+				"textn",
+				"substance/model/TextNode.js"
+			],
+			[
+				"dom",
+				"substance/model/DOMExporter.js"
+			],
+			[
+				"html",
+				"substance/model/HTMLExporter.js"
+			],
+			[
+				"sec",
+				"stencila/web/substance/packages/exec/StencilExecComponent.js"
+			],
+			[
+				"stenccom",
+				"stencila/web/substance/packages/math/StencilFormulaComponent.js"
+			],
+			[
+				"esp",
+				"stencila/web/substance/packages/writer/EditSourcePanel.js"
+			],
+			[
+				"htmlimpo",
+				"substance/model/HtmlImporter.js"
+			],
+			[
+				"link.js",
+				"substance/packages/link/Link.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/stencila/source/py/stencila.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "blame",
+		"selected_items":
+		[
+			[
+				"blame",
+				"blame"
+			]
+		],
+		"width": 1025.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 333.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
