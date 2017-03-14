@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Stencila Desktop</title>
+  <title>Stencila Desktop - Your documents</title>
   <link href="../node_modules/stencila/build/stencila.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="../node_modules/stencila/build/web/substance.js"></script>
   <script type="text/javascript" src="../node_modules/stencila/build/web/substance-mini.js"></script>
@@ -10,27 +10,9 @@
   <script type="text/javascript" src="../node_modules/stencila/build/katex/katex.min.js"></script>
   <script type="text/javascript" src="../node_modules/stencila/build/stencila.js"></script>
   <script>
-    const { MemoryBackend, Dashboard } = window.stencila
-    let stubBackend = new MemoryBackend()
-
-    window.addEventListener('load', () => {
-      Dashboard.mount({
-        backend: stubBackend,
-        resolveEditorURL: function(type, archiveURL) {
-          let editorURL
-          if (type === 'document') {
-            editorURL = "document.html"
-          } else {
-            editorURL = "sheet.html"
-          }
-          editorURL += '?archiveURL='+encodeURIComponent(archiveURL)
-          return editorURL
-        }
-      }, window.document.body)
-    })
+    require('./dashboard/dashboardWindow')
   </script>
 </head>
 <body>
-
 </body>
 </html>
