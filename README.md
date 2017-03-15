@@ -8,3 +8,9 @@ $ cd desktop
 $ npm install
 $ npm start
 ```
+
+Package application
+
+```bash
+$ npm run release
+```
