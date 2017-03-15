@@ -1,4 +1,4 @@
-const { DocumentPage, getQueryStringParam } = require('stencila')
+const { DocumentPage, getQueryStringParam } = window.stencila
 const backend = require('../shared/fileSystemBackend')
 
 const remote = require('electron').remote

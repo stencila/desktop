@@ -1,4 +1,4 @@
-const { Dashboard } = require('stencila')
+const { Dashboard } = window.stencila
 const remote = require('electron').remote
 const ipc = require('electron').ipcRenderer
 const currentWindow = remote.getCurrentWindow()
@@ -9,7 +9,6 @@ const dashboardMenuBuilder = new DashboardMenuBuilder()
 const backend = require('../shared/fileSystemBackend')
 
 let appState = {}
-
 
 function _updateMenu() {
   let menu = dashboardMenuBuilder.build(appState)
