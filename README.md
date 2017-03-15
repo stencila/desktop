@@ -3,9 +3,8 @@
 Install
 
 ```bash
-$ git clone https://github.com/stencila/stencila.git
-$ cd stencila
+$ git clone https://github.com/stencila/desktop.git
+$ cd desktop
 $ npm install
-$ npm build
 $ npm start
 ```
