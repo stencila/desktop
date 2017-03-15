@@ -14,8 +14,6 @@ class DashboardMenuBuilder {
     if (process.platform === 'darwin') {
       dashboardMenu.push(macOSAboutMenu)
     }
-    console.log('fileMenu', fileMenu(appState))
-
     dashboardMenu.push(fileMenu(appState))
     dashboardMenu.push(viewMenu(appState))
     dashboardMenu.push(windowMenu(appState))

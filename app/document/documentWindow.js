@@ -1,4 +1,4 @@
-const { DocumentPage, MemoryBackend, getQueryStringParam } = window.stencila
+const { DocumentPage, MemoryBackend, getQueryStringParam } = require('stencila')
 let stubBackend = new MemoryBackend()
 
 const remote = require('electron').remote
