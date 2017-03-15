@@ -17,7 +17,7 @@
     "publish": null
   },
   "scripts": {
-    "postinstall": "install-app-deps",
+    "postinstall": "install-app-deps && cd node_modules/stencila ; npm install ; cd ../..",
     "release": "build",
     "start": "electron ."
   },
