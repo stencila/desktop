@@ -22,7 +22,8 @@
     "start": "electron ."
   },
   "dependencies": {
-    "stencila-ui": "stencila/stencila#master"
+    "stencila": "stencila/stencila#master",
+    "stencila-node": "stencila/node#master"
   },
   "devDependencies": {
     "electron": "1.6.2",

@@ -1,5 +1,5 @@
-const { DocumentPage, MemoryBackend, getQueryStringParam } = window.stencila
-let stubBackend = new MemoryBackend()
+const { DocumentPage, getQueryStringParam } = require('stencila')
+const backend = require('../shared/fileSystemBackend')
 
 const remote = require('electron').remote
 const { Menu } = remote
@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
   let archiveURL = getQueryStringParam('archiveURL') || '/examples/kitchen-sink'
 
   window.documentPage = DocumentPage.mount({
-    backend: stubBackend,
+    backend,
     appState,
     archiveURL: archiveURL
   }, window.document.body)

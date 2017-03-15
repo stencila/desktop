@@ -1,5 +1,4 @@
-const { MemoryBackend, Dashboard } = window.stencila
-const stubBackend = new MemoryBackend()
+const { Dashboard } = require('stencila')
 const remote = require('electron').remote
 const ipc = require('electron').ipcRenderer
 const currentWindow = remote.getCurrentWindow()
@@ -7,8 +6,10 @@ const { Menu } = remote
 const windowId = currentWindow.id
 const DashboardMenuBuilder = require('./DashboardMenuBuilder')
 const dashboardMenuBuilder = new DashboardMenuBuilder()
+const backend = require('../shared/fileSystemBackend')
 
 let appState = {}
+
 
 function _updateMenu() {
   let menu = dashboardMenuBuilder.build(appState)
@@ -29,8 +30,9 @@ currentWindow.on('focus', () => {
 _updateMenu(appState)
 
 window.addEventListener('load', () => {
+
   Dashboard.mount({
-    backend: stubBackend,
+    backend,
     resolveEditorURL: function(type, archiveURL) {
       let editorURL
       if (type === 'document') {
