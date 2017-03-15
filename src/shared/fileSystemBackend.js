@@ -24,9 +24,9 @@ function initLibrary() {
     let documentId = uuid()
     // Create the needed folders
     if (!fs.existsSync(STENCILA_LIBRARY_DIR)) {
-      fs.mkdir(STENCILA_LIBRARY_DIR)
+      fs.mkdirSync(STENCILA_LIBRARY_DIR)
     }
-    fs.mkdir(path.join(STENCILA_LIBRARY_DIR, documentId))
+    fs.mkdirSync(path.join(STENCILA_LIBRARY_DIR, documentId))
 
     fs.writeFileSync(
       path.join(STENCILA_LIBRARY_DIR, documentId, 'index.html'),
