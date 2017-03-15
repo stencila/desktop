@@ -14,4 +14,5 @@ b.task('assets', () => {
   _copyAssets()
 })
 
-b.task('default', [ 'clean', 'assets' ])
+b.task('cleanbuild', [ 'clean', 'assets' ])
+b.task('default', [ 'assets' ])
