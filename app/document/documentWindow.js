@@ -19,6 +19,11 @@ function _updateMenu() {
 
 appState.on('change', () => {
   _updateMenu(appState)
+  let title = appState.get('title')
+  if (appState.get('hasPendingChanges')) {
+    title += ' *'
+  }
+  window.document.title = title
 })
 
 currentWindow.on('focus', () => {
@@ -34,20 +39,21 @@ ipc.on('command:executed', function(sender, data) {
   window.documentPage.executeCommand(data.commandName, data.commandParams)
 })
 
-ipc.on('save', function() {
-  console.log('saving document')
-  alert('saving document')
+ipc.on('save:requested', function() {
+  window.documentPage.save()
 })
 
 _updateMenu(appState)
-// appState = new AppState(ipc)
 
 window.addEventListener('load', () => {
-  let archiveURL = getQueryStringParam('archiveURL') || '/examples/kitchen-sink'
-
+  let documentId = getQueryStringParam('documentId')
   window.documentPage = DocumentPage.mount({
     backend,
     appState,
-    archiveURL: archiveURL
+    documentId
   }, window.document.body)
+
+  window.documentPage.on('loaded', () => {
+    window.document.title = window.documentPage.getTitle()
+  })
 })
