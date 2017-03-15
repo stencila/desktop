@@ -17,7 +17,7 @@
     "publish": null
   },
   "scripts": {
-    "postinstall": "install-app-deps && cd node_modules/stencila ; npm install ; cd ../..",
+    "postinstall": "install-app-deps && node make postinstall",
     "release": "build",
     "watch": "node make -w",
     "build": "node make",
@@ -33,6 +33,6 @@
     "electron": "1.6.2",
     "electron-builder": "^14.5.2",
     "source-map-support": "^0.4.11",
-    "substance-bundler": "^0.12.0"
+    "substance-bundler": "^0.15.2"
   }
 }
