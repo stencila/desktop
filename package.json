@@ -18,6 +18,7 @@
   },
   "scripts": {
     "postinstall": "install-app-deps && node make postinstall",
+    "lint": "eslint *.js src",
     "release": "build",
     "watch": "node make -w",
     "build": "node make",
