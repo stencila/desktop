@@ -1,6 +1,5 @@
 /* globals __dirname */
 var b = require('substance-bundler')
-var exec = require('substance-bundler/extensions/exec')
 var path = require('path')
 
 function _copyAssets() {

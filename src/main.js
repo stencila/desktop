@@ -4,7 +4,7 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
-const { app, ipcMain, Menu } = electron
+const { app, ipcMain, Menu } = electron // eslint-disable-line no-unused-vars
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
