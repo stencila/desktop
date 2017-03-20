@@ -17,7 +17,7 @@
     "publish": null
   },
   "scripts": {
-    "postinstall": "install-app-deps && node make postinstall",
+    "postinstall": "install-app-deps",
     "lint": "eslint *.js src",
     "release": "build",
     "watch": "node make -w",
@@ -26,7 +26,7 @@
     "start": "node make && npm-run-all --parallel watch app"
   },
   "dependencies": {
-    "stencila": "stencila/stencila#dbe0f34221e56d825a9a46ea2abefe34a119590d",
+    "stencila": "0.25.0-preview.2",
     "stencila-node": "stencila/node#cde9ad17e0d08414d31dbbfd3920f0f953262776"
   },
   "devDependencies": {

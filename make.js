@@ -1,6 +1,5 @@
 /* globals __dirname */
 var b = require('substance-bundler')
-var path = require('path')
 
 function _copyAssets() {
   b.copy('./src', './app')
@@ -9,13 +8,6 @@ function _copyAssets() {
 
 b.task('clean', () => {
   b.rm('app')
-})
-
-b.task('postinstall', () => {
-  b.exec('npm install', {
-    verbose: true,
-    cwd: path.join(__dirname, 'node_modules', 'stencila')
-  })
 })
 
 b.task('assets', () => {
