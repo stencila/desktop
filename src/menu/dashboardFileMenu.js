@@ -5,6 +5,10 @@ module.exports = function dashboardFileMenu() {
     label: 'File',
     submenu: [
       {
+        label: 'Import',
+        click: createMenuClickHandler('import:document')
+      },
+      {
         label: 'New Document',
         accelerator: 'CommandOrControl+N',
         click: createMenuClickHandler('new:document')

@@ -9,6 +9,7 @@ const dashboardMenuBuilder = new DashboardMenuBuilder()
 const initBackend = require('../shared/initBackend')
 const path = require('path')
 const fs = require('fs')
+const {dialog} = require('electron').remote
 
 const emptyDocument = fs.readFileSync(
   path.join(__dirname, '../../data/empty.html'),
@@ -44,6 +45,20 @@ window.addEventListener('load', () => {
     ipc.on('new:document', function() {
       backend.createDocument(emptyDocument).then((documentId) => {
         window.dashboard.reload()
+      })
+    })
+
+    ipc.on('import:document', function() {
+      dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+          {name: 'Documents', extensions: ['html', 'md', 'Rmd', 'ipynb']}
+        ]
+      }, function(filePaths) {
+        let filePath = filePaths[0]
+        backend.importFile(filePath).then(() => {
+          window.dashboard.reload()
+        })
       })
     })
 
