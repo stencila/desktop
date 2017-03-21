@@ -7,7 +7,8 @@ module.exports = function annotateMenu(appState) {
     let annoTools = appState.get('toolGroups').get('annotations').tools
     let commandStates = appState.get('commandStates')
     annoTools.forEach((annoTool) => {
-      let toolState = commandStates[annoTool.name]
+      let toolState = commandStates[annoTool.name] || { disabled: true }
+
       tools.push({
         type: 'checkbox',
         label: annoTool.name,
