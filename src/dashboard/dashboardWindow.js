@@ -7,6 +7,14 @@ const windowId = currentWindow.id
 const DashboardMenuBuilder = require('./DashboardMenuBuilder')
 const dashboardMenuBuilder = new DashboardMenuBuilder()
 const initBackend = require('../shared/initBackend')
+const path = require('path')
+const fs = require('fs')
+
+const emptyDocument = fs.readFileSync(
+  path.join(__dirname, '../../data/empty.html'),
+  'utf8'
+)
+
 
 let appState = {}
 
@@ -18,6 +26,8 @@ function _updateMenu() {
 currentWindow.on('focus', () => {
   // Set up the menu for the dashboard
   _updateMenu(appState)
+  // HACK: this fetches the latest library data
+  window.dashboard.reload()
 
   ipc.send('windowFocused', {
     windowId: windowId,
@@ -30,7 +40,14 @@ _updateMenu(appState)
 
 window.addEventListener('load', () => {
   initBackend().then((backend) => {
-    Dashboard.mount({
+
+    ipc.on('new:document', function() {
+      backend.createDocument(emptyDocument).then((documentId) => {
+        window.dashboard.reload()
+      })
+    })
+
+    window.dashboard = Dashboard.mount({
       backend,
       resolveEditorURL: function(type, documentId) {
         let editorURL

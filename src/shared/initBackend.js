@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const { app } = remote
 const welcomeToStencila = fs.readFileSync(
-  path.join(__dirname, '../examples/welcome-to-stencila.html'),
+  path.join(__dirname, '../../data/welcome-to-stencila.html'),
   'utf8'
 )
 
@@ -30,7 +30,9 @@ function initBackend() {
     // Create empty library file
     fs.writeFileSync(path.join(STENCILA_LIBRARY_DIR, 'library.json'), '{}', 'utf8')
     // Promise returns a backend instance
-    return fileSystemBackend.createDocument(welcomeToStencila)
+    return fileSystemBackend.createDocument(welcomeToStencila).then(() => {
+      return fileSystemBackend
+    })
   } else {
     // Nothing to do - just resolve the promise
     return Promise.resolve(fileSystemBackend)

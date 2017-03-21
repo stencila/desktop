@@ -1,7 +1,7 @@
 const { Menu } = require('electron').remote
 
 const macOSAboutMenu = require('../menu/macOSAboutMenu')
-const fileMenu = require('../menu/fileMenu')
+const dashboardFileMenu = require('../menu/dashboardFileMenu')
 const viewMenu = require('../menu/viewMenu')
 const windowMenu = require('../menu/windowMenu')
 
@@ -14,7 +14,7 @@ class DashboardMenuBuilder {
     if (process.platform === 'darwin') {
       dashboardMenu.push(macOSAboutMenu)
     }
-    dashboardMenu.push(fileMenu(appState))
+    dashboardMenu.push(dashboardFileMenu(appState))
     dashboardMenu.push(viewMenu(appState))
     dashboardMenu.push(windowMenu(appState))
     return Menu.buildFromTemplate(dashboardMenu)
