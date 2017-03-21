@@ -4,8 +4,10 @@ const remote = require('electron').remote
 const path = require('path')
 const fs = require('fs')
 const { app } = remote
-const welcomeToStencila = require('../examples/welcomeToStencila')
-const uuid = require('./uuid')
+const welcomeToStencila = fs.readFileSync(
+  path.join(__dirname, '../examples/welcome-to-stencila.html'),
+  'utf8'
+)
 
 const DOCUMENTS_DIR = app.getPath('documents')
 const STENCILA_LIBRARY_DIR = path.join(DOCUMENTS_DIR, 'Stencila')
@@ -18,42 +20,21 @@ const fileSystemBackend = new FileSystemBackend(STENCILA_LIBRARY_DIR)
 
   NOTE: This is done synchronously for now. It won't take much time.
 */
-function initLibrary() {
+function initBackend() {
   if (!fs.existsSync(STENCILA_LIBRARY_FILE)) {
 
-    let documentId = uuid()
     // Create the needed folders
     if (!fs.existsSync(STENCILA_LIBRARY_DIR)) {
       fs.mkdirSync(STENCILA_LIBRARY_DIR)
     }
-    fs.mkdirSync(path.join(STENCILA_LIBRARY_DIR, documentId))
-
-    fs.writeFileSync(
-      path.join(STENCILA_LIBRARY_DIR, documentId, 'index.html'),
-      welcomeToStencila,
-      'utf8'
-    )
-    fs.writeFileSync(
-      STENCILA_LIBRARY_FILE,
-      _libraryFile(documentId),
-      'utf8'
-    )
+    // Create empty library file
+    fs.writeFileSync(path.join(STENCILA_LIBRARY_DIR, 'library.json'), '{}', 'utf8')
+    // Promise returns a backend instance
+    return fileSystemBackend.createDocument(welcomeToStencila)
+  } else {
+    // Nothing to do - just resolve the promise
+    return Promise.resolve(fileSystemBackend)
   }
 }
 
-function _libraryFile(documentId) {
-  let libraryData = {}
-
-  libraryData[documentId] = {
-    "type": "document",
-    "title": "Welcome to Stencila",
-    "createdAt": "2017-03-10T00:03:12.060Z",
-    "modifiedAt": "2017-03-10T00:03:12.060Z",
-    "openedAt": "2017-03-10T00:03:12.060Z"
-  }
-  return JSON.stringify(libraryData, null, '  ')
-}
-
-initLibrary()
-
-module.exports = fileSystemBackend
+module.exports = initBackend

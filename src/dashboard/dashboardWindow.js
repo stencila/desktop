@@ -6,7 +6,7 @@ const { Menu } = remote
 const windowId = currentWindow.id
 const DashboardMenuBuilder = require('./DashboardMenuBuilder')
 const dashboardMenuBuilder = new DashboardMenuBuilder()
-const backend = require('../shared/fileSystemBackend')
+const initBackend = require('../shared/initBackend')
 
 let appState = {}
 
@@ -29,18 +29,19 @@ currentWindow.on('focus', () => {
 _updateMenu(appState)
 
 window.addEventListener('load', () => {
-
-  Dashboard.mount({
-    backend,
-    resolveEditorURL: function(type, documentId) {
-      let editorURL
-      if (type === 'document') {
-        editorURL = "document.html"
-      } else {
-        editorURL = "sheet.html"
+  initBackend().then((backend) => {
+    Dashboard.mount({
+      backend,
+      resolveEditorURL: function(type, documentId) {
+        let editorURL
+        if (type === 'document') {
+          editorURL = "document.html"
+        } else {
+          editorURL = "sheet.html"
+        }
+        editorURL += '?documentId='+encodeURIComponent(documentId)
+        return editorURL
       }
-      editorURL += '?documentId='+encodeURIComponent(documentId)
-      return editorURL
-    }
-  }, window.document.body)
+    }, window.document.body)
+  })
 })

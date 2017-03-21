@@ -1,5 +1,5 @@
 const { DocumentPage, getQueryStringParam } = window.stencila
-const backend = require('../shared/fileSystemBackend')
+const initBackend = require('../shared/initBackend')
 
 const remote = require('electron').remote
 const { Menu } = remote
@@ -46,14 +46,16 @@ ipc.on('save:requested', function() {
 _updateMenu(appState)
 
 window.addEventListener('load', () => {
-  let documentId = getQueryStringParam('documentId')
-  window.documentPage = DocumentPage.mount({
-    backend,
-    appState,
-    documentId
-  }, window.document.body)
+  initBackend().then((backend) => {
+    let documentId = getQueryStringParam('documentId')
+    window.documentPage = DocumentPage.mount({
+      backend,
+      appState,
+      documentId
+    }, window.document.body)
 
-  window.documentPage.on('loaded', () => {
-    window.document.title = window.documentPage.getTitle()
+    window.documentPage.on('loaded', () => {
+      window.document.title = window.documentPage.getTitle()
+    })
   })
 })
