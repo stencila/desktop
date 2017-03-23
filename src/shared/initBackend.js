@@ -10,7 +10,7 @@ const welcomeToStencila = fs.readFileSync(
 )
 
 const DOCUMENTS_DIR = app.getPath('documents')
-const STENCILA_LIBRARY_DIR = path.join(DOCUMENTS_DIR, 'Stencila')
+const STENCILA_LIBRARY_DIR = path.join(DOCUMENTS_DIR, 'Stencila-0.25')
 const STENCILA_LIBRARY_FILE = path.join(STENCILA_LIBRARY_DIR, 'library.json')
 const fileSystemBackend = new FileSystemBackend(STENCILA_LIBRARY_DIR)
 

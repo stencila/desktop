@@ -24,6 +24,17 @@ function _updateMenu() {
   Menu.setApplicationMenu(menu)
 }
 
+function resolveEditorURL(type, documentId) {
+  let editorURL
+  if (type === 'document') {
+    editorURL = "document.html"
+  } else {
+    editorURL = "sheet.html"
+  }
+  editorURL += '?documentId='+encodeURIComponent(documentId)
+  return editorURL
+}
+
 currentWindow.on('focus', () => {
   // Set up the menu for the dashboard
   _updateMenu(appState)
@@ -44,6 +55,7 @@ window.addEventListener('load', () => {
 
     ipc.on('new:document', function() {
       backend.createDocument(emptyDocument).then((documentId) => {
+        window.open(resolveEditorURL('document', documentId))
         window.dashboard.reload()
       })
     })
@@ -64,16 +76,7 @@ window.addEventListener('load', () => {
 
     window.dashboard = Dashboard.mount({
       backend,
-      resolveEditorURL: function(type, documentId) {
-        let editorURL
-        if (type === 'document') {
-          editorURL = "document.html"
-        } else {
-          editorURL = "sheet.html"
-        }
-        editorURL += '?documentId='+encodeURIComponent(documentId)
-        return editorURL
-      }
+      resolveEditorURL
     }, window.document.body)
   })
 })
