@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const { app } = remote
 const welcomeToStencila = fs.readFileSync(
-  path.join(__dirname, '../../data/welcome-to-stencila.html'),
+  path.join(__dirname, '../data/welcome-to-stencila.html'),
   'utf8'
 )
 
