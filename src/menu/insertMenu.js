@@ -5,7 +5,7 @@ module.exports = function annotateMenu(appState) {
   let labelProvider = appState.get('labelProvider')
   let tools = []
   if (toolGroups) {
-    let annoTools = appState.get('toolGroups').get('annotations').tools
+    let annoTools = appState.get('toolGroups').get('insert').tools
     let commandStates = appState.get('commandStates')
     annoTools.forEach((annoTool) => {
       let toolState = commandStates[annoTool.name] || { disabled: true }
@@ -23,7 +23,7 @@ module.exports = function annotateMenu(appState) {
   }
 
   let annotateMenu = {
-    label: 'Annotate',
+    label: 'Insert',
     submenu: tools
   }
   return annotateMenu

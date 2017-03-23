@@ -43,6 +43,7 @@ window.onbeforeunload = function () {
       title: "Unsaved changes",
       message: "Document has changes, do you want to save them?",
       buttons: ["Don't save", "Cancel", "Save"],
+      defaultId: 2,
       cancelId: 1
     }, function(buttonId) {
       if (buttonId === 0) {
