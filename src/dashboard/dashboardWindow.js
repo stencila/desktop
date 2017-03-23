@@ -6,7 +6,16 @@ const { Menu } = remote
 const windowId = currentWindow.id
 const DashboardMenuBuilder = require('./DashboardMenuBuilder')
 const dashboardMenuBuilder = new DashboardMenuBuilder()
-const backend = require('../shared/fileSystemBackend')
+const initBackend = require('../shared/initBackend')
+const path = require('path')
+const fs = require('fs')
+const {dialog} = require('electron').remote
+
+const emptyDocument = fs.readFileSync(
+  path.join(__dirname, '../../data/empty.html'),
+  'utf8'
+)
+
 
 let appState = {}
 
@@ -15,9 +24,22 @@ function _updateMenu() {
   Menu.setApplicationMenu(menu)
 }
 
+function resolveEditorURL(type, documentId) {
+  let editorURL
+  if (type === 'document') {
+    editorURL = "document.html"
+  } else {
+    editorURL = "sheet.html"
+  }
+  editorURL += '?documentId='+encodeURIComponent(documentId)
+  return editorURL
+}
+
 currentWindow.on('focus', () => {
   // Set up the menu for the dashboard
   _updateMenu(appState)
+  // HACK: this fetches the latest library data
+  window.dashboard.reload()
 
   ipc.send('windowFocused', {
     windowId: windowId,
@@ -29,18 +51,32 @@ currentWindow.on('focus', () => {
 _updateMenu(appState)
 
 window.addEventListener('load', () => {
+  initBackend().then((backend) => {
 
-  Dashboard.mount({
-    backend,
-    resolveEditorURL: function(type, documentId) {
-      let editorURL
-      if (type === 'document') {
-        editorURL = "document.html"
-      } else {
-        editorURL = "sheet.html"
-      }
-      editorURL += '?documentId='+encodeURIComponent(documentId)
-      return editorURL
-    }
-  }, window.document.body)
+    ipc.on('new:document', function() {
+      backend.createDocument(emptyDocument).then((documentId) => {
+        window.open(resolveEditorURL('document', documentId))
+        window.dashboard.reload()
+      })
+    })
+
+    ipc.on('import:document', function() {
+      dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+          {name: 'Documents', extensions: ['html', 'md', 'Rmd', 'ipynb']}
+        ]
+      }, function(filePaths) {
+        let filePath = filePaths[0]
+        backend.importFile(filePath).then(() => {
+          window.dashboard.reload()
+        })
+      })
+    })
+
+    window.dashboard = Dashboard.mount({
+      backend,
+      resolveEditorURL
+    }, window.document.body)
+  })
 })
