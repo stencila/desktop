@@ -12,7 +12,7 @@ const fs = require('fs')
 const {dialog} = require('electron').remote
 
 const emptyDocument = fs.readFileSync(
-  path.join(__dirname, '../../data/empty.html'),
+  path.join(__dirname, '../data/empty.html'),
   'utf8'
 )
 
