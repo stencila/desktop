@@ -1,5 +1,8 @@
 # Stencila Desktop
 
+[![Dependency status](https://david-dm.org/stencila/desktop.svg)](https://david-dm.org/stencila/desktop)
+[![Chat](https://badges.gitter.im/stencila/stencila.svg)](https://gitter.im/stencila/stencila)
+
 Install
 
 ```bash
