@@ -4,10 +4,6 @@ const remote = require('electron').remote
 const path = require('path')
 const fs = require('fs')
 const { app } = remote
-const welcomeToStencila = fs.readFileSync(
-  path.join(__dirname, '../data/welcome-to-stencila.html'),
-  'utf8'
-)
 
 const DOCUMENTS_DIR = app.getPath('documents')
 const STENCILA_LIBRARY_DIR = path.join(DOCUMENTS_DIR, 'Stencila-0.25')
@@ -29,10 +25,24 @@ function initBackend() {
     }
     // Create empty library file
     fs.writeFileSync(path.join(STENCILA_LIBRARY_DIR, 'library.json'), '{}', 'utf8')
-    // Promise returns a backend instance
-    return fileSystemBackend.createDocument(welcomeToStencila).then(() => {
+
+    let documentIds = Object.keys(window.GUIDES)
+
+    let createDocument = (documentId) => {
+      let html = window.GUIDES[documentId]
+      return fileSystemBackend.createDocument(html)
+    }
+
+    let runTasksInSeries = documentIds.reduce(function(p, documentId) {
+      return p.then(function() {
+        return createDocument(documentId)
+      })
+    }, Promise.resolve())
+
+    return runTasksInSeries.then(() => {
       return fileSystemBackend
     })
+
   } else {
     // Nothing to do - just resolve the promise
     return Promise.resolve(fileSystemBackend)
