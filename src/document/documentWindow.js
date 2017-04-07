@@ -9,6 +9,7 @@ const windowId = currentWindow.id
 const documentMenuBuilder = new DocumentMenuBuilder()
 const AppState = require('./AppState')
 const { dialog } = require('electron').remote
+const { shell } = remote
 
 let appState = new AppState()
 
@@ -34,6 +35,11 @@ currentWindow.on('focus', () => {
   })
 })
 
+// HACK: we should find a better solution to intercept window.open calls
+// (e.g. as done by LinkComponent)
+window.open = function(url /*, frameName, features*/) {
+  shell.openExternal(url)
+}
 
 window.onbeforeunload = function () {
 
