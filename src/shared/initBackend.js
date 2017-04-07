@@ -6,7 +6,7 @@ const fs = require('fs')
 const { app } = remote
 
 const DOCUMENTS_DIR = app.getPath('documents')
-const STENCILA_LIBRARY_DIR = path.join(DOCUMENTS_DIR, 'Stencila-0.25')
+const STENCILA_LIBRARY_DIR = path.join(DOCUMENTS_DIR, 'Stencila-0.25.1')
 const STENCILA_LIBRARY_FILE = path.join(STENCILA_LIBRARY_DIR, 'library.json')
 const fileSystemBackend = new FileSystemBackend(STENCILA_LIBRARY_DIR)
 

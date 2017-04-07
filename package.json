@@ -2,7 +2,7 @@
   "name": "stencila-desktop",
   "productName": "Stencila Desktop",
   "description": "Stencila for the desktop",
-  "version": "0.25.0",
+  "version": "0.25.1",
   "author": "Nokome Bentley",
   "homepage": "http://stenci.la",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "start": "node make && npm-run-all --parallel watch app"
   },
   "dependencies": {
-    "stencila": "^0.25.2",
+    "stencila": "^0.25.7",
     "stencila-node": "^0.25.0"
   },
   "devDependencies": {
