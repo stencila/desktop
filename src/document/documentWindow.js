@@ -1,4 +1,4 @@
-const { DocumentPage, getQueryStringParam } = window.stencila
+const { DocumentPage, Host, getQueryStringParam } = window.stencila
 const initBackend = require('../shared/initBackend')
 const remote = require('electron').remote
 const { Menu } = remote
@@ -84,10 +84,12 @@ _updateMenu(appState)
 
 window.addEventListener('load', () => {
   initBackend().then((backend) => {
+    let host = new Host()
     window.backend = backend
     let documentId = getQueryStringParam('documentId')
     window.documentId = documentId
     window.documentPage = DocumentPage.mount({
+      host,
       backend,
       appState,
       documentId
