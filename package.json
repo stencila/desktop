@@ -5,6 +5,13 @@
   "version": "0.26.0",
   "author": "Nokome Bentley",
   "homepage": "http://stenci.la",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stencila/desktop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stencila/desktop/issues"
+  },
   "license": "Apache-2.0",
   "main": "app/main.js",
   "build": {
@@ -26,7 +33,7 @@
     "start": "node make && npm-run-all --parallel watch app"
   },
   "dependencies": {
-    "stencila": "^0.25.7",
+    "stencila": "^0.26.0",
     "stencila-node": "^0.26.0"
   },
   "devDependencies": {
