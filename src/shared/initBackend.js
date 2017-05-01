@@ -1,5 +1,5 @@
 /* window process */
-const { FileSystemBackend } = require('stencila-node')
+const { FileSystemBackend } = require('stencila-node-0.26.0')
 const remote = require('electron').remote
 const path = require('path')
 const fs = require('fs')
