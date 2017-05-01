@@ -33,8 +33,8 @@
     "start": "node make && npm-run-all --parallel watch app"
   },
   "dependencies": {
-    "stencila": "^0.26.0",
-    "stencila-node-0.26.0": "^0.26.1"
+    "stencila": "^0.26.2",
+    "stencila-node": "stencila/node#0.26.2"
   },
   "devDependencies": {
     "npm-run-all": "^3.1.0",
