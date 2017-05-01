@@ -1,5 +1,6 @@
 ## Stencila Desktop
 
+[![Build status](https://travis-ci.org/stencila/desktop.svg?branch=master)](https://travis-ci.org/stencila/desktop)
 [![Dependency status](https://david-dm.org/stencila/desktop.svg)](https://david-dm.org/stencila/desktop)
 [![Chat](https://badges.gitter.im/stencila/stencila.svg)](https://gitter.im/stencila/stencila)
 
