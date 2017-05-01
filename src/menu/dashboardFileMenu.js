@@ -10,8 +10,9 @@ module.exports = function dashboardFileMenu() {
         click: createMenuClickHandler('new:document')
       },
       {
-        label: 'Import',
-        click: createMenuClickHandler('import:document')
+        label: 'Open',
+        accelerator: 'CommandOrControl+O',
+        click: createMenuClickHandler('open:document')
       }
     ]
   }

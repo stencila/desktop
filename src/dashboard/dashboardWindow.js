@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
       })
     })
 
-    ipc.on('import:document', function() {
+    ipc.on('open:document', function() {
       dialog.showOpenDialog({
         properties: ['openFile'],
         filters: [
