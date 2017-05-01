@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "stencila": "^0.26.0",
-    "stencila-node": "^0.26.0"
+    "stencila-node-0.26.0": "^0.26.0"
   },
   "devDependencies": {
     "npm-run-all": "^3.1.0",
