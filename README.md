@@ -1,7 +1,9 @@
 ## Stencila Desktop
 
+[![Experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 [![Build status](https://travis-ci.org/stencila/desktop.svg?branch=master)](https://travis-ci.org/stencila/desktop)
 [![Dependency status](https://david-dm.org/stencila/desktop.svg)](https://david-dm.org/stencila/desktop)
+[![Community](https://img.shields.io/badge/join-community-green.svg)](https://community.stenci.la)
 [![Chat](https://badges.gitter.im/stencila/stencila.svg)](https://gitter.im/stencila/stencila)
 
 ### Install
@@ -18,6 +20,8 @@ We :heart: feedback. Create a [new issue](https://github.com/stencila/desktop/is
 
 ### Develop
 
+Get started by running the app in development mode:
+
 ```bash
 $ git clone https://github.com/stencila/desktop.git
 $ cd desktop
@@ -25,7 +29,7 @@ $ npm install
 $ npm start
 ```
 
-Package the application
+Package the application:
 
 ```bash
 $ npm run release
