@@ -8,7 +8,7 @@ const { app, ipcMain, Menu } = electron // eslint-disable-line no-unused-vars
 
 // Run a Stencila Node.js host to provide execution contexts etc
 const { host } = require('stencila-node')
-host.run()
+host.start()
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -51,6 +51,8 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit()
   }
+  // Stop the Stencila Node.js host
+  host.stop()
 })
 
 app.on('activate', function () {
