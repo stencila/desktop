@@ -3,8 +3,8 @@ const { Menu } = require('electron').remote
 const macOSAboutMenu = require('../menu/macOSAboutMenu')
 const fileMenu = require('../menu/fileMenu')
 const editMenu = require('../menu/editMenu')
-const annotateMenu = require('../menu/annotateMenu')
-const insertMenu = require('../menu/insertMenu')
+// const annotateMenu = require('../menu/annotateMenu')
+// const insertMenu = require('../menu/insertMenu')
 const viewMenu = require('../menu/viewMenu')
 const windowMenu = require('../menu/windowMenu')
 
@@ -19,8 +19,8 @@ class DocumentMenuBuilder {
     }
     documentMenu.push(fileMenu(appState))
     documentMenu.push(editMenu(appState))
-    documentMenu.push(annotateMenu(appState))
-    documentMenu.push(insertMenu(appState))
+    // documentMenu.push(annotateMenu(appState))
+    // documentMenu.push(insertMenu(appState))
     documentMenu.push(viewMenu(appState))
     documentMenu.push(windowMenu(appState))
     return Menu.buildFromTemplate(documentMenu)
