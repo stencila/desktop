@@ -84,10 +84,21 @@ _updateMenu(appState)
 
 window.addEventListener('load', () => {
   initBackend().then((backend) => {
-    let host = new Host()
+    // A new host in the browser window that will discover peers:
+    //  e.g. Stencila Node.js host started in `main.js`
+    //  e.g. Stencila R host started 'manually' locally
+    //  e.g. Stencila Python host started in a docker container
+    let host = new Host({
+      // Attempt to discover hosts every x seconds
+      discover: 30
+    })
+    window.host = host
+
     window.backend = backend
+
     let documentId = getQueryStringParam('documentId')
     window.documentId = documentId
+
     window.documentPage = DocumentPage.mount({
       host,
       backend,
