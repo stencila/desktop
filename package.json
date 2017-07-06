@@ -26,7 +26,7 @@
   "scripts": {
     "postinstall": "install-app-deps",
     "lint": "eslint *.js src",
-    "release": "node make build",
+    "release": "node make && build",
     "watch": "node make -w",
     "build": "node make",
     "app": "electron .",
