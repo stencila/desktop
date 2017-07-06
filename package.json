@@ -1,8 +1,8 @@
 {
   "name": "stencila-desktop",
-  "productName": "Stencila Desktop",
+  "productName": "Stencila",
   "description": "Stencila for the desktop",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "author": "Nokome Bentley",
   "homepage": "http://stenci.la",
   "repository": {
@@ -13,11 +13,11 @@
     "url": "https://github.com/stencila/desktop/issues"
   },
   "license": "Apache-2.0",
-  "main": "app/main.js",
+  "main": "./bundle/main.js",
   "build": {
     "appId": "com.stencila.stencila-desktop",
     "files": [
-      "app/**/*",
+      "bundle/**/*",
       "node_modules/**/*",
       "package.json"
     ],
@@ -33,14 +33,14 @@
     "start": "node make && npm-run-all --parallel watch app"
   },
   "dependencies": {
-    "stencila": "^0.26.3",
-    "stencila-node": "^0.26.2"
+    "stencila": "0.27.4",
+    "stencila-node": "0.27.0"
   },
   "devDependencies": {
     "npm-run-all": "^3.1.0",
     "extract-zip": "=1.6.0",
-    "electron": "1.6.2",
-    "electron-builder": "^14.5.2",
+    "electron": "1.6.11",
+    "electron-builder": "19.13.0",
     "source-map-support": "^0.4.11",
     "substance-bundler": "^0.15.2"
   }

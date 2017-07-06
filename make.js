@@ -2,17 +2,18 @@
 var b = require('substance-bundler')
 
 function _copyAssets() {
-  b.copy('./src', './app')
-  b.copy('./node_modules/stencila/build', './app/lib/stencila')
+  b.copy('./src', './bundle')
+  b.copy('./package.json', './bundle/package.json')
+  b.copy('./node_modules/stencila/build', './bundle/lib/stencila')
 }
 
 b.task('clean', () => {
-  b.rm('app')
+  b.rm('bundle')
+  b.rm('dist')
 })
 
 b.task('assets', () => {
   _copyAssets()
 })
 
-b.task('cleanbuild', [ 'clean', 'assets' ])
-b.task('default', [ 'assets' ])
+b.task('default', [ 'clean', 'assets' ])
