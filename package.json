@@ -34,7 +34,6 @@
   },
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "stencila": "0.27.5",
     "stencila-node": "0.27.2"
   },
   "devDependencies": {
