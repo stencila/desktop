@@ -33,6 +33,7 @@
     "start": "node make && npm-run-all --parallel watch app"
   },
   "dependencies": {
+    "mkdirp": "^0.5.1",
     "stencila": "0.27.4",
     "stencila-node": "0.27.0"
   },

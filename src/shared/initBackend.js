@@ -1,6 +1,7 @@
 /* window process */
 const path = require('path')
 const fs = require('fs')
+const mkdirp = require('mkdirp')
 
 const { FileSystemBackend, host } = require('stencila-node')
 const { version } = require('../package.json')
@@ -20,7 +21,7 @@ function initBackend() {
 
     // Create the needed folders
     if (!fs.existsSync(STENCILA_LIBRARY_DIR)) {
-      fs.mkdirSync(STENCILA_LIBRARY_DIR)
+      mkdirp(STENCILA_LIBRARY_DIR)
     }
     // Create empty library file
     fs.writeFileSync(path.join(STENCILA_LIBRARY_DIR, 'library.json'), '{}', 'utf8')
