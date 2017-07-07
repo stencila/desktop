@@ -89,7 +89,9 @@ window.addEventListener('load', () => {
     //  e.g. Stencila R host started 'manually' locally
     //  e.g. Stencila Python host started in a docker container
     let host = new Host({
-      // Attempt to discover hosts every x seconds
+      // No initial peers
+      peers: null,
+      // Attempt to discover local peers every x seconds
       discover: 30
     })
     window.host = host
