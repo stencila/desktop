@@ -2,17 +2,25 @@ dist: trusty
 language: node_js
 node_js:
   - 7
+
 os:
   - osx
   - linux
+
 addons:
   apt:
     packages:
       - xvfb
 env:
   - DISPLAY=":99.0"
+
 install:
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
   - npm install
-after_success:
-  - npm run release
+
+deploy:
+  provider: script
+  script: npm run release
+  on:
+    branch: master
+  skip_cleanup: true
