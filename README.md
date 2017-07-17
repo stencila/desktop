@@ -31,7 +31,7 @@ $ npm start
 
 ### Release workflow
 
-Try out the release before npm publishing using local npm installs.
+1. Try out the release before npm publishing using local npm installs.
 
 Have all projects (stencila, stencila-node, stencila-desktop) side by side.
 
@@ -73,6 +73,9 @@ Update the stencila-node dependency and bump version of stencila-desktop in `pac
 Now make a release bundle for each platform (OSX, Linux, Windows)
 
 ```bash
+$ cd stencila-desktop
+$ rm -rf node_modules
+$ npm install
 $ npm run release
 ```
 
