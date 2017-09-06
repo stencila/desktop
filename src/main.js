@@ -47,8 +47,6 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-  // Stop the Stencila Node.js host
-  host.stop()
 })
 
 app.on('activate', function () {
