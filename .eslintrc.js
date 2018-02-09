@@ -3,7 +3,6 @@ module.exports = {
     "sourceType": "module",
     "ecmaVersion": 6
   },
-  "installedESLint": true,
   "extends": "eslint:recommended",
   "globals": [
     // browser
@@ -135,4 +134,4 @@ module.exports = {
     "no-unused-vars": 2,
     "no-use-before-define": [2, { "functions": false, "classes": false }]
   }
-};
+}
