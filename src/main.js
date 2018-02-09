@@ -3,6 +3,8 @@ const electron = require('electron')
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
+const express = require('express')
+const darServer = require('dar-server')
 
 const { app, ipcMain, Menu } = electron // eslint-disable-line no-unused-vars
 
@@ -56,6 +58,24 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+const expressApp = express()
+const port = 5000
+const serverUrl = 'http://localhost:'+port
+
+// HACK: Do not hardcode this!
+const archiveDir = '/Users/michael/projects/stencila/data'
+darServer.serve(expressApp, {
+  port,
+  serverUrl: 'http://localhost:'+port,
+  rootDir: archiveDir,
+  apiUrl: '/archives'
+})
+
+expressApp.listen(port, () =>
+  console.info('DocumentArchive Server is running at', serverUrl)
+)
+
 
 // ipcMain.on('updateWindowAppState', (event, message) => {
 //   console.log('RECEIVED FOO EVENT', message)
