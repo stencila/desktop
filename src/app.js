@@ -12,13 +12,8 @@ const {
   StencilaArchive
 } = window.stencila
 
-
 const darServer = require('dar-server')
 const { FSStorageClient } = darServer
-
-// HACK: Do not hardcode this!
-const ARCHIVE_DIR = '/Users/michael/projects/stencila/stencila/data/kitchen-sink'
-
 
 window.addEventListener('load', () => {
   substanceGlobals.DEBUG_RENDERING = platform.devtools
@@ -75,8 +70,7 @@ class App extends Component {
   }
 
   _init() {
-    // let archiveId = getQueryStringParam('archive') || 'kitchen-sink'
-    let archiveDir = getQueryStringParam('archiveDir') || ARCHIVE_DIR
+    let archiveDir = getQueryStringParam('archiveDir')
     let storage = new FSStorageClient()
     let buffer = new InMemoryDarBuffer()
     let archive = new StencilaArchive(storage, buffer)
