@@ -1,5 +1,5 @@
 const {
-  getQueryStringParam, Component, DefaultDOMElement, parseKeyEvent,
+  getQueryStringParam, Component,
   InMemoryDarBuffer, substanceGlobals,
   platform
 } = window.substance
@@ -12,6 +12,7 @@ const {
   StencilaArchive
 } = window.stencila
 
+const ipc = require('electron').ipcRenderer
 const darServer = require('dar-server')
 const { FSStorageClient } = darServer
 
@@ -24,11 +25,15 @@ class App extends Component {
 
   didMount() {
     this._init()
-    DefaultDOMElement.getBrowserWindow().on('keydown', this._keyDown, this)
+    this._archive.on('archive:changed', this._archiveChanged, this)
+    ipc.on('document:save', () => {
+      this._save()
+    })
   }
 
   dispose() {
-    DefaultDOMElement.getBrowserWindow().off(this)
+    // TODO: is it necessary to do ipc.off?
+    // (App component is never unmounted, only the full window is killed)
   }
 
   getInitialState() {
@@ -43,7 +48,6 @@ class App extends Component {
     let { archive, host, functionManager, engine, error } = this.state
 
     if (archive) {
-
       el.append(
         $$(Project, {
           documentArchive: archive,
@@ -74,8 +78,10 @@ class App extends Component {
     let storage = new FSStorageClient()
     let buffer = new InMemoryDarBuffer()
     let archive = new StencilaArchive(storage, buffer)
+    this._archive = archive
     archive.load(archiveDir)
       .then(() => {
+        this._updateTitle()
         return setupStencilaContext(archive)
       }).then(({host, functionManager, engine}) => {
         this.setState({archive, functionManager, engine, host})
@@ -92,18 +98,25 @@ class App extends Component {
   */
   _save() {
     this.state.archive.save().then(() => {
-      console.info('successfully saved')
+      this._updateTitle(false)
     }).catch(err => {
       console.error(err)
     })
   }
 
-  _keyDown(e) {
-    let key = parseKeyEvent(e)
-    // CommandOrControl+S
-    if (key === 'META+83' || key === 'CTRL+83') {
-      this._save()
-      e.preventDefault()
+  _archiveChanged() {
+    let pendingChanges = this._archive.hasPendingChanges()
+    if (pendingChanges) {
+      this._updateTitle(pendingChanges)
     }
   }
+
+  _updateTitle(pendingChanges) {
+    let newTitle = this._archive.getTitle()
+    if (pendingChanges) {
+      newTitle += " *"
+    }
+    document.title = newTitle
+  }
+
 }

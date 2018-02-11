@@ -10,8 +10,7 @@ const { dialog } = require('electron')
 const DAR_FOLDER = process.env.DAR_FOLDER
 const DEBUG = process.env.DEBUG
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+// Keep a global reference of all the open windows
 let windows = []
 
 // TODO: Make sure the same dar folder can't be opened multiple times
@@ -84,6 +83,14 @@ function createMenu() {
           accelerator: 'CommandOrControl+O',
           click() {
             promptOpen()
+          }
+        },
+        {
+          label: 'Save',
+          accelerator: 'CommandOrControl+S',
+          click() {
+            let focusedWindow = BrowserWindow.getFocusedWindow()
+            focusedWindow.webContents.send('document:save')
           }
         }
       ]
