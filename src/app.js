@@ -15,6 +15,8 @@ const {
 const ipc = require('electron').ipcRenderer
 const darServer = require('dar-server')
 const { FSStorageClient } = darServer
+const url = require('url')
+const path = require('path')
 
 window.addEventListener('load', () => {
   substanceGlobals.DEBUG_RENDERING = platform.devtools
@@ -28,6 +30,9 @@ class App extends Component {
     this._archive.on('archive:changed', this._archiveChanged, this)
     ipc.on('document:save', () => {
       this._save()
+    })
+    ipc.on('document:save-as', (event, newArchiveDir) => {
+      this._saveAs(newArchiveDir)
     })
   }
 
@@ -75,12 +80,19 @@ class App extends Component {
 
   _init() {
     let archiveDir = getQueryStringParam('archiveDir')
+    let isNew = getQueryStringParam('isNew')
+    console.info('archiveDir', archiveDir)
     let storage = new FSStorageClient()
     let buffer = new InMemoryDarBuffer()
     let archive = new StencilaArchive(storage, buffer)
     this._archive = archive
     archive.load(archiveDir)
       .then(() => {
+        // HACK: Set archive dirty from the beginning, so we get the unsaved
+        // changes star (*) in the title
+        if (isNew) {
+          archive._makeAllResourcesDirty()
+        }
         this._updateTitle()
         return setupStencilaContext(archive)
       }).then(({host, functionManager, engine}) => {
@@ -104,16 +116,38 @@ class App extends Component {
     })
   }
 
+  _saveAs(newArchiveDir) {
+    console.info('saving as', newArchiveDir)
+    this.state.archive.saveAs(newArchiveDir).then(() => {
+      this._updateTitle(false)
+      ipc.send('document:save-as:successful')
+      // Update the browser url, so on reload, we get the contents from the
+      // new location
+      let newUrl = url.format({
+        pathname: path.join(__dirname, 'index.html'),
+        protocol: 'file:',
+        query: {
+          archiveDir: newArchiveDir
+        },
+        slashes: true
+      })
+      window.history.replaceState({}, 'After Save As', newUrl);
+
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
   _archiveChanged() {
-    let pendingChanges = this._archive.hasPendingChanges()
-    if (pendingChanges) {
-      this._updateTitle(pendingChanges)
+    let isDirty = this._archive.isDirty()
+    if (isDirty) {
+      this._updateTitle(isDirty)
     }
   }
 
-  _updateTitle(pendingChanges) {
+  _updateTitle(isDirty) {
     let newTitle = this._archive.getTitle()
-    if (pendingChanges) {
+    if (isDirty) {
       newTitle += " *"
     }
     document.title = newTitle
