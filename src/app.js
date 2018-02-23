@@ -90,9 +90,9 @@ class App extends Component {
       .then(() => {
         // HACK: Set archive dirty from the beginning, so we get the unsaved
         // changes star (*) in the title
-        if (isNew) {
-          archive._makeAllResourcesDirty()
-        }
+        // if (isNew) {
+        //   archive._makeAllResourcesDirty()
+        // }
         this._updateTitle()
         return setupStencilaContext(archive)
       }).then(({host, functionManager, engine}) => {

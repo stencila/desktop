@@ -222,9 +222,6 @@ function saveAs() {
     if (dirPaths) {
       let newPath = dirPaths[0]
       focusedWindow.webContents.send('document:save-as', newPath)
-      // ATTENTION: We need to make sure that after a successful save
-      // we remove the isNew flag from the window (this is currently
-      // done in app.js)
     }
   })
 }
