@@ -1,5 +1,5 @@
 const electron = require('electron')
-const { without } = require('substance')
+
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
@@ -48,7 +48,10 @@ function createEditorWindow(darFolder, isNew) {
 
   // Emitted when the window is closed.
   editorWindow.on('closed', function () {
-    windows = without(windows, editorWindow)
+    var index = windows.indexOf(editorWindow)
+    if (index >= 0) {
+      windows.splice(index, 1)
+    }
   })
 
 }
