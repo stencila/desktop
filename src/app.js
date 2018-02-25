@@ -80,7 +80,7 @@ class App extends Component {
 
   _init() {
     let archiveDir = getQueryStringParam('archiveDir')
-    let isNew = getQueryStringParam('isNew')
+    // let isNew = getQueryStringParam('isNew')
     console.info('archiveDir', archiveDir)
     let storage = new FSStorageClient()
     let buffer = new InMemoryDarBuffer()
@@ -88,11 +88,6 @@ class App extends Component {
     this._archive = archive
     archive.load(archiveDir)
       .then(() => {
-        // HACK: Set archive dirty from the beginning, so we get the unsaved
-        // changes star (*) in the title
-        // if (isNew) {
-        //   archive._makeAllResourcesDirty()
-        // }
         this._updateTitle()
         return setupStencilaContext(archive)
       }).then(({host, functionManager, engine}) => {
@@ -139,15 +134,15 @@ class App extends Component {
   }
 
   _archiveChanged() {
-    let isDirty = this._archive.isDirty()
-    if (isDirty) {
-      this._updateTitle(isDirty)
+    let hasPendingChanges = this._archive.hasPendingChanges()
+    if (hasPendingChanges) {
+      this._updateTitle(hasPendingChanges)
     }
   }
 
-  _updateTitle(isDirty) {
+  _updateTitle(hasPendingChanges) {
     let newTitle = this._archive.getTitle()
-    if (isDirty) {
+    if (hasPendingChanges) {
       newTitle += " *"
     }
     document.title = newTitle
