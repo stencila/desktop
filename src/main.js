@@ -1,5 +1,5 @@
 const electron = require('electron')
-const { without } = require('substance')
+
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
@@ -9,23 +9,33 @@ const { dialog } = require('electron')
 
 const DAR_FOLDER = process.env.DAR_FOLDER
 const DEBUG = process.env.DEBUG
+const BLANK_DOCUMENT_FOLDER = path.join(__dirname, 'lib/stencila/examples/blank')
+
 
 // Keep a global reference of all the open windows
 let windows = []
 
 // TODO: Make sure the same dar folder can't be opened multiple times
-function createEditorWindow(darFolder) {
+function createEditorWindow(darFolder, isNew) {
 
   // Create the browser window.
   let editorWindow = new BrowserWindow({width: 1024, height: 768})
 
+  let query = {
+    archiveDir: darFolder
+  }
+
+  if (isNew) {
+    query.isNew = "true"
+    // Remember on the window object, so on next save we can delegate
+    // to saveAs workflow
+    editorWindow.isNew = true
+  }
   // and load the index.html of the app.
   let mainUrl = url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
-    query: {
-      archiveDir: darFolder
-    },
+    query,
     slashes: true
   })
   editorWindow.loadURL(mainUrl)
@@ -38,7 +48,10 @@ function createEditorWindow(darFolder) {
 
   // Emitted when the window is closed.
   editorWindow.on('closed', function () {
-    windows = without(windows, editorWindow)
+    var index = windows.indexOf(editorWindow)
+    if (index >= 0) {
+      windows.splice(index, 1)
+    }
   })
 
 }
@@ -51,7 +64,8 @@ app.on('ready', () => {
   if (DAR_FOLDER) {
     createEditorWindow(DAR_FOLDER)
   } else {
-    promptOpen()
+    openNew()
+    // promptOpen()
   }
 })
 
@@ -79,6 +93,13 @@ function createMenu() {
       label: 'File',
       submenu: [
         {
+          label: 'New',
+          accelerator: 'CommandOrControl+N',
+          click() {
+            openNew()
+          }
+        },
+        {
           label: 'Open',
           accelerator: 'CommandOrControl+O',
           click() {
@@ -89,8 +110,14 @@ function createMenu() {
           label: 'Save',
           accelerator: 'CommandOrControl+S',
           click() {
-            let focusedWindow = BrowserWindow.getFocusedWindow()
-            focusedWindow.webContents.send('document:save')
+            save()
+          }
+        },
+        {
+          label: 'Save As...',
+          accelerator: 'CommandOrControl+Shift+S',
+          click() {
+            saveAs()
           }
         }
       ]
@@ -174,3 +201,36 @@ function promptOpen() {
     }
   })
 }
+
+function openNew() {
+  createEditorWindow(BLANK_DOCUMENT_FOLDER, true)
+}
+
+function save() {
+  let focusedWindow = BrowserWindow.getFocusedWindow()
+  if (focusedWindow.isNew) {
+    saveAs()
+  } else {
+    focusedWindow.webContents.send('document:save')
+  }
+}
+
+function saveAs() {
+  let focusedWindow = BrowserWindow.getFocusedWindow()
+  dialog.showOpenDialog({
+    title: 'Save archive as...',
+    buttonLabel: 'Save',
+    properties: ['openDirectory', 'createDirectory']
+  }, (dirPaths) => {
+    if (dirPaths) {
+      let newPath = dirPaths[0]
+      focusedWindow.webContents.send('document:save-as', newPath)
+    }
+  })
+}
+
+ipcMain.on('document:save-as:successful', (/*event*/) => {
+  console.info('Save As was successful.')
+  let focusedWindow = BrowserWindow.getFocusedWindow()
+  focusedWindow.isNew = false
+})

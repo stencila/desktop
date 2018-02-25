@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "stencila": "0.28.0-preview.4",
-    "dar-server": "0.3.0",
+    "stencila": "0.28.0-preview.5",
+    "dar-server": "0.4.0",
     "express": "4.16.2"
   },
   "devDependencies": {
