@@ -25,6 +25,7 @@ function createEditorWindow(darFolder, isNew) {
     archiveDir: darFolder
   }
 
+  editorWindow.isSaved = true
   if (isNew) {
     query.isNew = "true"
     // Remember on the window object, so on next save we can delegate
@@ -54,6 +55,21 @@ function createEditorWindow(darFolder, isNew) {
     }
   })
 
+  editorWindow.on('close', function(e) {
+    const focusedWindow = BrowserWindow.getFocusedWindow()
+    const isSaved = focusedWindow.isSaved
+    if(!isSaved) {
+      const choice = dialog.showMessageBox({
+        type: 'question',
+        buttons: ['Leave', 'Stay'],
+        title: 'Do you want to close a window?',
+        message: 'Your document have unsaved changes'
+      })
+      if(choice === 1) {
+        e.preventDefault()
+      }
+    }
+  })
 }
 
 // This method will be called when Electron has finished
@@ -233,4 +249,10 @@ ipcMain.on('document:save-as:successful', (/*event*/) => {
   console.info('Save As was successful.')
   let focusedWindow = BrowserWindow.getFocusedWindow()
   focusedWindow.isNew = false
+  focusedWindow.isSaved = true
+})
+
+ipcMain.on('document:unsaved', () => {
+  let focusedWindow = BrowserWindow.getFocusedWindow()
+  focusedWindow.isSaved = false
 })
