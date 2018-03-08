@@ -34,14 +34,14 @@
   },
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "stencila": "0.28.0-preview.6",
+    "stencila": "0.28.0-preview.7",
     "dar-server": "0.4.1",
     "express": "4.16.2"
   },
   "devDependencies": {
     "npm-run-all": "^3.1.0",
     "extract-zip": "=1.6.0",
-    "electron": "2.0.0-beta.1",
+    "electron": "2.0.0-beta.2",
     "electron-builder": "20.2.0",
     "source-map-support": "0.5.3",
     "substance-bundler": "^0.20.10"
