@@ -19,7 +19,7 @@ let windows = []
 function createEditorWindow(darFolder, isNew) {
 
   // Create the browser window.
-  let editorWindow = new BrowserWindow({width: 1024, height: 768})
+  let editorWindow = new BrowserWindow({ width: 1024, height: 768 })
 
   let query = {
     archiveDir: darFolder
@@ -59,15 +59,27 @@ function createEditorWindow(darFolder, isNew) {
     const focusedWindow = BrowserWindow.getFocusedWindow()
     const isSaved = focusedWindow.isSaved
     if(!isSaved) {
-      const choice = dialog.showMessageBox({
-        type: 'question',
-        buttons: ['Leave', 'Stay'],
-        title: 'Do you want to close a window?',
-        message: 'Your document have unsaved changes'
+
+      dialog.showMessageBox({
+        type: "question",
+        title: "Unsaved changes",
+        message: "Document has changes, do you want to save them?",
+        buttons: ["Don't save", "Cancel", "Save"],
+        defaultId: 2,
+        cancelId: 1
+      }, function(buttonId) {
+        if (buttonId === 0) {
+          // Just close, no saving
+        } else if (buttonId === 1) {
+          // Just stay
+          e.preventDefault()
+        } else if (buttonId === 2) {
+          // HACK: we don't have control over the save workflow (which is
+          // done in the window). So it could happen that the window closes
+          // before all changes are saved.
+          save()
+        }
       })
-      if(choice === 1) {
-        e.preventDefault()
-      }
     }
   })
 }
@@ -81,7 +93,6 @@ app.on('ready', () => {
     createEditorWindow(DAR_FOLDER)
   } else {
     openNew()
-    // promptOpen()
   }
 })
 
