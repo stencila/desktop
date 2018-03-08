@@ -134,8 +134,9 @@ class App extends Component {
   }
 
   _archiveChanged() {
-    let hasPendingChanges = this._archive.hasPendingChanges()
+    const hasPendingChanges = this._archive.hasPendingChanges()
     if (hasPendingChanges) {
+      ipc.send('document:unsaved')
       this._updateTitle(hasPendingChanges)
     }
   }
@@ -147,5 +148,4 @@ class App extends Component {
     }
     document.title = newTitle
   }
-
 }
