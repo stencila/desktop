@@ -3,7 +3,7 @@ var b = require('substance-bundler')
 
 function _copyAssets() {
   b.copy('./src', './bundle')
-  b.copy('./package.json', './bundle/package.json')
+  // b.copy('./package.json', './bundle/package.json')
   b.copy('./node_modules/stencila/dist', './bundle/lib/stencila')
 }
 

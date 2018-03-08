@@ -56,10 +56,8 @@ function createEditorWindow(darFolder, isNew) {
   })
 
   editorWindow.on('close', function(e) {
-    const focusedWindow = BrowserWindow.getFocusedWindow()
-    const isSaved = focusedWindow.isSaved
+    const isSaved = editorWindow.isSaved
     if(!isSaved) {
-
       dialog.showMessageBox({
         type: "question",
         title: "Unsaved changes",
