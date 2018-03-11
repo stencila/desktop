@@ -1,7 +1,7 @@
 const {
   getQueryStringParam, Component,
   InMemoryDarBuffer, substanceGlobals,
-  platform
+  platform, DefaultDOMElement
 } = window.substance
 
 const { JATSImportDialog } = window.texture
@@ -44,6 +44,8 @@ class App extends Component {
     ipc.on('document:save-as', (event, newArchiveDir) => {
       this._saveAs(newArchiveDir)
     })
+    DefaultDOMElement.getBrowserWindow().on('keydown', this._keyDown, this)
+    DefaultDOMElement.getBrowserWindow().on('click', this._click, this)
   }
 
   dispose() {
@@ -157,5 +159,22 @@ class App extends Component {
       newTitle += " *"
     }
     document.title = newTitle
+  }
+
+  _keyDown(event) {
+    if ( event.key === 'Dead' ) return
+    // Handle custom keyboard shortcuts globally
+    let archive = this.state.archive
+    if (archive) {
+      let manuscriptSession = archive.getEditorSession('manuscript')
+      manuscriptSession.keyboardManager.onKeydown(event)
+    }
+  }
+
+  _click(event) {
+    if (event.target.tagName === 'A' && event.target.attributes.href.value !== '#') {
+      event.preventDefault();
+      shell.openExternal(event.target.href)
+    }
   }
 }
