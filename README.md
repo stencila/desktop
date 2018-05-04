@@ -19,7 +19,7 @@ This will open Stencila Desktop and you can start editing the new document.
 
 ### Bundle
 
-You can bundle Stencila Desktop as an application for OSX, Windows and Linux. In odeer to do that, in the downloaded `desktop` directory run:
+You can bundle Stencila Desktop as an application for OSX, Windows and Linux. In order to do that, in the downloaded `desktop` directory run:
 
 ```
 $ npm run release
@@ -28,9 +28,12 @@ $ npm run release
 Find your bundle in the `dist` folder.
 
 ## Windows
-To run Stencila Desktop on Windows, download Stencila Windows release (0.27):
-Windows : [Stencila.Setup.0.27.4.exe](https://github.com/stencila/desktop/releases/download/v0.27.4/Stencila.Setup.0.27.4.exe)
+To run Stencila Desktop on Windows, download Stencila Desktop Windows release (0.27):
+
+[Stencila.Setup.0.27.4.exe](https://github.com/stencila/desktop/releases/download/v0.27.4/Stencila.Setup.0.27.4.exe)
 
 
 ## Mac OS X
-Mac OSX : [Stencila-0.27.4.dmg](https://github.com/stencila/desktop/releases/download/v0.27.4/Stencila-0.27.4.dmg)
+To run Stencila Dekstop on Mac OS X, download Stencila Desktop Mac OS X release (0.27)
+
+[Stencila-0.27.4.dmg](https://github.com/stencila/desktop/releases/download/v0.27.4/Stencila-0.27.4.dmg)
