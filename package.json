@@ -36,7 +36,7 @@
     "dar-server": "0.4.1",
     "mkdirp": "^0.5.1",
     "stencila": "0.28.0-preview.9",
-    "stencila-node": "^0.28.10"
+    "stencila-node": "^0.28.11"
   },
   "devDependencies": {
     "npm-run-all": "^3.1.0",
