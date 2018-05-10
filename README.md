@@ -1,8 +1,20 @@
 ## Stencila Desktop
 
-The calls for research to be transparent and reproducible have never been louder. But today's tools for reproducible research can be intimidating - especially if you're not a coder. We're building software for reproducible research with the intuitive, visual interfaces that you and your colleagues are used to.
+Stencila is an open source office suite for reproducible research.: allowing you to do reproducible research 
+with the intuitive, visual interfaces that you and your colleagues are used to.
+Stencila Desktop is a part of the Stencila ecosystem.
 
 ### Install
+
+Download an installer for the latest release at https://github.com/stencila/desktop/releases
+
+- Windows : `.exe`
+- Mac OSX : `.dmg`
+- Linux: `.AppImage`
+
+### Develop
+
+To run a development version of Stencila Desktop:
 
 ```bash
 $ git clone https://github.com/stencila/desktop.git
@@ -11,15 +23,10 @@ $ npm install
 $ npm start
 ```
 
-Open an existing Dar archive for editing.
-
-### Bundling
-
-To bundle as an application for OSX, Windows, Linux do the following on each
-platform:
+To create a distributable binary of Stencila Desktop:
 
 ```
 $ npm run release
 ```
 
-Find your bundle in the `dist` folder.
+Find the binary for your operating system in the `dist` folder.
