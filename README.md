@@ -6,9 +6,13 @@ Stencila Desktop is a part of the Stencila ecosystem.
 
 ### Install
 
-Download the installer for your platform for the latest release https://github.com/stencila/desktop/releases
+Download an installer for the latest release at https://github.com/stencila/desktop/releases
 
-### Development
+- Windows : `.exe`
+- Mac OSX : `.dmg`
+- Linux: `.AppImage`
+
+### Develop
 
 To run a development version of Stencila Desktop:
 
