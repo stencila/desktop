@@ -2,8 +2,8 @@
   "name": "stencila-desktop",
   "productName": "Stencila",
   "description": "Stencila for the desktop",
-  "version": "0.28.0-preview.1",
-  "author": "Nokome Bentley",
+  "version": "0.28.0",
+  "author": "Stencila contributors",
   "homepage": "http://stenci.la",
   "repository": {
     "type": "git",
@@ -35,8 +35,8 @@
   "dependencies": {
     "dar-server": "0.4.1",
     "mkdirp": "^0.5.1",
-    "stencila": "0.28.0-preview.9",
-    "stencila-node": "^0.28.11"
+    "stencila": "0.28.0",
+    "stencila-node": "^0.28.12"
   },
   "devDependencies": {
     "npm-run-all": "^3.1.0",
