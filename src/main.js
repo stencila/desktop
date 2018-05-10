@@ -19,7 +19,11 @@ let windows = []
 function createEditorWindow(darFolder, isNew) {
 
   // Create the browser window.
-  let editorWindow = new BrowserWindow({ width: 1024, height: 768 })
+  let editorWindow = new BrowserWindow({
+    width: 1024,
+    height: 768,
+    icon: path.join(__dirname, 'icon.ico')
+  })
 
   let query = {
     archiveDir: darFolder
