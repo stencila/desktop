@@ -168,8 +168,6 @@ function createMenu() {
     {
       label: 'View',
       submenu: [
-        {role: 'reload'},
-        {role: 'forcereload'},
         {role: 'toggledevtools'},
         {type: 'separator'},
         {role: 'resetzoom'},
@@ -191,7 +189,7 @@ function createMenu() {
       submenu: [
         {
           label: 'Learn More',
-          click () { require('electron').shell.openExternal('https://electronjs.org') }
+          click () { require('electron').shell.openExternal('https://stenci.la') }
         }
       ]
     }
