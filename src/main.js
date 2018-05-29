@@ -10,7 +10,7 @@ const { dialog } = require('electron')
 const DAR_FOLDER = process.env.DAR_FOLDER
 const DEBUG = process.env.DEBUG
 const BLANK_DOCUMENT_FOLDER = path.join(__dirname, 'lib/stencila/examples/blank')
-
+const EXAMPLES_FOLDER = path.join(__dirname, 'lib/stencila/examples')
 
 // Keep a global reference of all the open windows
 let windows = []
@@ -136,6 +136,17 @@ function createMenu() {
           }
         },
         {
+          label: 'Open Example',
+          submenu: [
+            {
+              label: 'Introduction to Stencila',
+              click() {
+                openExample('introduction')
+              }
+            }
+          ]
+        },
+        {
           label: 'Save',
           accelerator: 'CommandOrControl+S',
           click() {
@@ -168,8 +179,6 @@ function createMenu() {
     {
       label: 'View',
       submenu: [
-        {role: 'reload'},
-        {role: 'forcereload'},
         {role: 'toggledevtools'},
         {type: 'separator'},
         {role: 'resetzoom'},
@@ -190,8 +199,8 @@ function createMenu() {
       role: 'help',
       submenu: [
         {
-          label: 'Learn More',
-          click () { require('electron').shell.openExternal('https://electronjs.org') }
+          label: 'About Stencila',
+          click () { require('electron').shell.openExternal('https://stenci.la') }
         }
       ]
     }
@@ -233,6 +242,10 @@ function promptOpen() {
 
 function openNew() {
   createEditorWindow(BLANK_DOCUMENT_FOLDER, true)
+}
+
+function openExample(name) {
+  createEditorWindow(EXAMPLES_FOLDER + '/'+name, true)
 }
 
 function save() {
