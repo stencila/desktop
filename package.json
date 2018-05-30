@@ -16,6 +16,7 @@
   "main": "./bundle/main.js",
   "build": {
     "appId": "com.stencila.stencila-desktop",
+    "asar": "false",
     "files": [
       "bundle/**/*",
       "node_modules/**/*",
