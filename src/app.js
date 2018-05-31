@@ -44,3 +44,8 @@ window.addEventListener('load', () => {
     }, window.document.body)
   })
 })
+
+window.addEventListener('beforeunload', () => {
+  // Stop the host (and any peer hosts that it has spawned)
+  host.stop()
+})
