@@ -2,7 +2,7 @@
   "name": "stencila-desktop",
   "productName": "Stencila",
   "description": "Stencila for the desktop",
-  "version": "0.28.1",
+  "version": "0.28.2",
   "author": "Stencila contributors",
   "homepage": "http://stenci.la",
   "repository": {
@@ -36,7 +36,7 @@
   "dependencies": {
     "dar-server": "0.4.1",
     "mkdirp": "^0.5.1",
-    "stencila": "0.28.1",
+    "stencila": "0.28.2",
     "stencila-node": "0.28.14"
   },
   "devDependencies": {
