@@ -40,7 +40,7 @@
     "stencila-node": "^0.28.15"
   },
   "devDependencies": {
-    "electron": "2.0.2",
+    "electron": "7.2.4",
     "electron-builder": "^20.43.0",
     "npm-run-all": "^3.1.0",
     "source-map-support": "0.5.3",
